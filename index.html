@@ -1,8 +1,88 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>Pudza Site</title>
+	<title>PUDZA Dashboard</title>
+
+    <script src="js/raphael-2.1.4.min.js"></script>
+    <script src="js/justgage.js"></script>
+
+	<script src="js/microgear.js"></script>
+
+	<script>
+		const APPID = "PUDZAHydro";
+		const KEY = "BwBRekvWcYFkRGJ";
+		const SECRET = "sDJCEcobv9l66aoB0LkaZl4HE";
+
+		const ALIAS = "htmlgear";
+
+		var microgear = Microgear.create({
+			key: KEY,
+			secret: SECRET,
+			alias : ALIAS
+		});
+
+		microgear.on('message',function(topic,msg) {
+			document.getElementById("data").innerHTML = msg;
+			var vals = msg.split(",");
+			g1.refresh(vals[0]);
+			g2.refresh(vals[1]);
+		});
+
+		microgear.on('connected', function() {
+			microgear.setAlias(ALIAS);
+			document.getElementById("data").innerHTML = "Now I am connected with netpie...";
+			setInterval(function() {
+//				microgear.chat("htmlgear","Hello from myself at "+Date.now());
+			},5000);
+		});
+
+		microgear.on('present', function(event) {
+			console.log(event);
+		});
+
+		microgear.on('absent', function(event) {
+			console.log(event);
+		});
+
+		microgear.resettoken(function(err) {
+			microgear.connect(APPID);
+		});
+	</script>
+
+
 </head>
 <body>
-	PUD-ZA:kongdej srisamran 	123
+<div id="data">_____</div>
+<div id="gauge1"></div>  
+<div id="gauge2"></div>  
+
+<script type="text/javascript">
+    var g1 = new JustGage({
+        id: "gauge1",
+        value: 0,
+//        value:0,
+        min: 0,
+        max: 100,
+//        counter: true,
+        decimals:2,
+//        formatNumber:true,
+        title: "Ambient Temperture",
+        label:"DegC"
+     });
+    var g2 = new JustGage({
+        id: "gauge2",
+        value: 0,
+ //       value:0,
+        min: 0,
+        max: 100,
+//        counter: true,
+//        formatNumber:true,
+        donut: true,
+        title: "Ambient Humidity",
+        label:"%"
+     });
+
+
+</script>
 </body>
+</html>
