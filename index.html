@@ -26,6 +26,7 @@
 			var vals = msg.split(",");
 			g1.refresh(vals[0]);
 			g2.refresh(vals[1]);
+			g3.refresh(vals[2]);
 		});
 
 		microgear.on('connected', function() {
@@ -55,24 +56,22 @@
 <div id="data">_____</div>
 <div id="gauge1"></div>  
 <div id="gauge2"></div>  
+<div id="gauge3"></div>  
 
 <script type="text/javascript">
     var g1 = new JustGage({
         id: "gauge1",
         value: 0,
-//        value:0,
         min: 0,
         max: 100,
-//        counter: true,
         decimals:2,
-//        formatNumber:true,
         title: "Ambient Temperture",
         label:"DegC"
      });
+
     var g2 = new JustGage({
         id: "gauge2",
         value: 0,
- //       value:0,
         min: 0,
         max: 100,
 //        counter: true,
@@ -81,8 +80,35 @@
         title: "Ambient Humidity",
         label:"%"
      });
+     var g3 = new JustGage({
+        id: "gauge1",
+        value: 0,
+        min: 0,
+        max: 100,
+        decimals:2,
+        title: "Ambient Temperture",
+        label:"DegC"
+     });
 
 
 </script>
 </body>
 </html>
+<!-- Note
+Sensors
+
+INPUT
+	- ambient temperature dht21
+	- ambient Humidity dht21
+	- water temperature
+	- EC
+	- ambient light
+	- water flow 
+	- rain
+	- soil humidity
+	- motion sensor
+
+OUTPUT
+	- relay
+
+-->
