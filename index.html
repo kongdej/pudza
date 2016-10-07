@@ -57,6 +57,7 @@
 <div id="gauge1"></div>  
 <div id="gauge3"></div>  
 <div id="gauge2"></div>  
+<div id="gauge4"></div>  
 
 <script type="text/javascript">
     var g1 = new JustGage({
@@ -90,6 +91,16 @@
         label:"DegC"
      });
 
+     var g4 = new JustGage({
+        id: "gauge4",
+        value: 0,
+        min: 0,
+        max: 100,
+        decimals:2,
+        donut: true,
+        title: "Soil Moisture",
+        label:"%"
+     });
 
 </script>
 </body>
