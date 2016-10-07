@@ -28,6 +28,7 @@
 			g2.refresh(vals[1]);
 			g3.refresh(vals[2]);
 			g4.refresh(vals[3]);
+			g5.refresh(vals[4]);
 		});
 
 		microgear.on('connected', function() {
@@ -59,6 +60,7 @@
 <div id="gauge3"></div>  
 <div id="gauge2"></div>  
 <div id="gauge4"></div>  
+<div id="gauge5"></div>  
 
 <script type="text/javascript">
     var g1 = new JustGage({
@@ -100,6 +102,16 @@
         decimals:2,
         donut: true,
         title: "Soil Moisture",
+        label:"%"
+     });
+     var g5 = new JustGage({
+        id: "gauge5",
+        value: 0,
+        min: 0,
+        max: 100,
+        decimals:2,
+        donut: true,
+        title: "Rain",
         label:"%"
      });
 
