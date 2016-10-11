@@ -70,9 +70,9 @@ MSG:<div id="data">_____</div>
 <script type="text/javascript">
     $( document ).ready(function() {
         $("#cb").click(function () {
-            console.log($('#ec_cal').val());
+//            console.log($('#ec_cal').val());
 //            microgear.chat(“eccal”, "ec:" + $('#ec_cal').value());
-            microgear.publish ("/eccal", $('#ec_cal').val());
+            microgear.publish ("/PUDZAHydro/eccal", $('#ec_cal').val());
         });
     });
 
