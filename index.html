@@ -35,6 +35,7 @@
 		microgear.on('connected', function() {
 			microgear.setAlias(ALIAS);
 			document.getElementById("data").innerHTML = "Now I am connected with netpie...";
+            microgear.subscribe("/eccal");
 			setInterval(function() {
 //				microgear.chat("htmlgear","Hello from myself at "+Date.now());
 			},5000);
@@ -56,7 +57,9 @@
 
 </head>
 <body>
-MSG:<div id="data">_____</div>
+<input type="textbox" id="ec_cal" value="2.5"></input>
+<button id="cb">Calibrate EC</button>
+<hr><div id="data">_____</div>
 <div id="gauge1"></div>  
 <div id="gauge3"></div>  
 <div id="gauge2"></div>  
@@ -64,15 +67,13 @@ MSG:<div id="data">_____</div>
 <div id="gauge5"></div>  
 <div id="gauge6"></div>  
 
-<input type="textbox" id="ec_cal"alue="2.5"></input>
-<button id="cb">Get TextBox Value</button>
 
 <script type="text/javascript">
     $( document ).ready(function() {
         $("#cb").click(function () {
-//            console.log($('#ec_cal').val());
-//            microgear.chat(“eccal”, "ec:" + $('#ec_cal').value());
-            microgear.publish ("/PUDZAHydro/eccal", $('#ec_cal').val());
+            console.log($('#ec_cal').val());
+//            microgear.chat("/plant", $("#ec_cal").value());
+            microgear.publish ("/eccal", $('#ec_cal').val());
         });
     });
 
