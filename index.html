@@ -22,7 +22,7 @@
 		});
 
 		microgear.on('message',function(topic,msg) {
-			document.getElementById("data").innerHTML = msg;
+			document.getElementById("data").innerHTML = topic+"--"+msg;
 			var vals = msg.split(",");
 			g1.refresh(vals[0]);
 			g2.refresh(vals[1]);
@@ -31,6 +31,11 @@
 			g5.refresh(vals[4]);
 			g6.refresh(vals[5]);
             g7.refresh(vals[6]);
+            if (topic == "/PUDZAHydro/lux") {
+                g8.refresh(msg);
+            }
+
+
 		});
 
 		microgear.on('connected', function() {
@@ -39,6 +44,7 @@
             microgear.subscribe("/eccal");
             microgear.subscribe("/lux");
 			setInterval(function() {
+            }
 //				microgear.chat("htmlgear","Hello from myself at "+Date.now());
 			},5000);
 		});
@@ -62,6 +68,7 @@
 <input type="textbox" id="ec_cal" value="2.5"></input>
 <button id="cb">Calibrate EC</button>
 <hr><div id="data">_____</div>
+<div id="gauge8"></div>  
 <div id="gauge7"></div>  
 <div id="gauge1"></div>  
 <div id="gauge3"></div>  
@@ -153,6 +160,16 @@
         label:"mS/cm"
      });
 
+     var g8 = new JustGage({
+        id: "gauge8",
+        value: 0,
+        min: 0,
+        max: 100000,
+//        decimals:2,
+//        donut: true,
+        title: "Light",
+        label:"Lux"
+     });
 </script>
 </body>
 </html>
