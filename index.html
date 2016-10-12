@@ -31,9 +31,9 @@
 			g5.refresh(vals[4]);
 			g6.refresh(vals[5]);
             g7.refresh(vals[6]);
-//            if (topic == "/PUDZAHydro/lux") {
-//                g8.refresh(msg);
-//            }
+            if (topic == "/PUDZAHydro/lux") {
+                g8.refresh(msg);
+            }
 
 
 		});
@@ -43,10 +43,10 @@
 			document.getElementById("data").innerHTML = "Now I am connected with netpie...";
             microgear.subscribe("/eccal");
             microgear.subscribe("/lux");
-			setInterval(function() {
-            }
+//			setInterval(function() {
+//           }
 //				microgear.chat("htmlgear","Hello from myself at "+Date.now());
-			},5000);
+//			},5000);
 		});
 
 		microgear.on('present', function(event) {
