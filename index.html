@@ -23,17 +23,20 @@
 
 		microgear.on('message',function(topic,msg) {
 			document.getElementById("data").innerHTML = topic+"--"+msg;
-			var vals = msg.split(",");
-			g1.refresh(vals[0]);
-			g2.refresh(vals[1]);
-			g3.refresh(vals[2]);
-			g4.refresh(vals[3]);
-			g5.refresh(vals[4]);
-			g6.refresh(vals[5]);
-            g7.refresh(vals[6]);
             if (topic == "/PUDZAHydro/nodemcu/lux") {
                 g8.refresh(msg);
             }
+            else {
+                var vals = msg.split(",");
+                g1.refresh(vals[0]);
+                g2.refresh(vals[1]);
+                g3.refresh(vals[2]);
+                g4.refresh(vals[3]);
+                g5.refresh(vals[4]);
+                g6.refresh(vals[5]);
+                g7.refresh(vals[6]);
+            }
+
 
 
 		});
@@ -43,6 +46,7 @@
 			document.getElementById("data").innerHTML = "Now I am connected with netpie...";
             microgear.subscribe("/raspipython/eccal");
             microgear.subscribe("/nodemcu/lux");
+            }
 //			setInterval(function() {
 //           }
 //				microgear.chat("htmlgear","Hello from myself at "+Date.now());
