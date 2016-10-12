@@ -53,7 +53,7 @@ void onConnected(char *attribute, uint8_t* msg, unsigned int msglen) {
   Serial.println("Connected to NETPIE...");
   microgear.setName("nodemcu");
   microgear.setAlias(ALIAS);
-  microgear.subscribe("/PUDZAHydro/lux");
+  microgear.subscribe("/nodemcu/lux");
 }
 
 void setup(){
@@ -88,7 +88,7 @@ void loop() {
     uint16_t lux = lightMeter.readLightLevel();
     Serial.print("Light: ");Serial.print(lux);Serial.println(" lx");  
 //    microgear.chat("htmlgear", String(lux));
-    microgear.publish ("/lux", String(lux));
+    microgear.publish ("/nodemcu/lux", String(lux));
   } else {
     Serial.println("connection lost, reconnect...");
     microgear.connect(APPID);

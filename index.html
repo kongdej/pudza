@@ -41,8 +41,8 @@
 		microgear.on('connected', function() {
 			microgear.setAlias(ALIAS);
 			document.getElementById("data").innerHTML = "Now I am connected with netpie...";
-            microgear.subscribe("/eccal");
-            microgear.subscribe("/lux");
+            microgear.subscribe("/raspipython/eccal");
+            microgear.subscribe("/nodemcu/lux");
 //			setInterval(function() {
 //           }
 //				microgear.chat("htmlgear","Hello from myself at "+Date.now());
@@ -83,7 +83,7 @@
         $("#cb").click(function () {
             console.log($('#ec_cal').val());
 //            microgear.chat("/plant", $("#ec_cal").value());
-            microgear.publish ("/eccal", $('#ec_cal').val());
+            microgear.publish ("/raspipython/eccal", $('#ec_cal').val());
         });
     });
 
