@@ -28,7 +28,7 @@ unsigned long oldTime;
 DHT dht(DHTPIN, DHTTYPE);
 //** Parameters for EC sensor **//
 float K = 1.66;    // default K for calibreation
-int R1 = 667;     // resistance 
+int R1 = 670;     // <*************resistance 
 float Ra = 0.5;    //Resistance of powering Pins
 int ECPin = A4;   // Signal pin
 int ECGround = A5; // Ground pin
