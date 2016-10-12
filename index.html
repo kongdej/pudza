@@ -37,6 +37,7 @@
 			microgear.setAlias(ALIAS);
 			document.getElementById("data").innerHTML = "Now I am connected with netpie...";
             microgear.subscribe("/eccal");
+            microgear.subscribe("/lux");
 			setInterval(function() {
 //				microgear.chat("htmlgear","Hello from myself at "+Date.now());
 			},5000);
