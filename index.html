@@ -102,7 +102,7 @@
         $("#cb").click(function () {
             console.log($('#ec_cal').val());
 //            microgear.chat("/plant", $("#ec_cal").value());
-            microgear.publish ("/raspipython/eccal", $('#ec_cal').val());
+            microgear.publish ("/eccal", $('#ec_cal').val());
         });
     });
 
