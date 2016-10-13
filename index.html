@@ -22,35 +22,50 @@
 		});
 
 		microgear.on('message',function(topic,msg) {
-			document.getElementById("data").innerHTML = topic+"--"+msg;
-            if (topic == "/PUDZAHydro/nodemcu/lux") {
+			// debug
+            document.getElementById("data").innerHTML = topic+"--"+msg;
+//            var vals = msg.split(",");
+            if (topic == "/PUDZAHydro/uno/amptemp") {
+                g1.refresh(msg);
+            }
+            else if (topic == "/PUDZAHydro/uno/amphum") {
+                g2.refresh(msg);
+            }
+            else if (topic == "/PUDZAHydro/uno/wtrtemp") {
+                g3.refresh(msg);
+            }
+            else if (topic == "/PUDZAHydro/uno/soilhum") {
+                g4.refresh(msg);
+            }
+            else if (topic == "/PUDZAHydro/uno/rain") {
+                g5.refresh(msg);
+            }
+            else if (topic == "/PUDZAHydro/uno/flow") {
+                g6.refresh(msg);
+            }
+            else if (topic == "/PUDZAHydro/uno/ec") {
+                g7.refresh(msg);
+            }
+            else if (topic == "/PUDZAHydro/nodemcu/lux") {
                 g8.refresh(msg);
             }
             else {
-                var vals = msg.split(",");
-                g1.refresh(vals[0]);
-                g2.refresh(vals[1]);
-                g3.refresh(vals[2]);
-                g4.refresh(vals[3]);
-                g5.refresh(vals[4]);
-                g6.refresh(vals[5]);
-                g7.refresh(vals[6]);
+                document.getElementById("data").innerHTML = topic+"--"+msg;
             }
-
-
-
 		});
 
 		microgear.on('connected', function() {
 			microgear.setAlias(ALIAS);
-			document.getElementById("data").innerHTML = "Now I am connected with netpie...";
+			document.getElementById("data").innerHTML = "Connected to netpie...";
             microgear.subscribe("/raspipython/eccal");
+            microgear.subscribe("/uno/amptemp");
+            microgear.subscribe("/uno/amphum");
+            microgear.subscribe("/uno/wtrtemp");
+            microgear.subscribe("/uno/flow");
+            microgear.subscribe("/uno/soilhum");
+            microgear.subscribe("/uno/rain");
+            microgear.subscribe("/uno/ec");
             microgear.subscribe("/nodemcu/lux");
-//           }
-//			setInterval(function() {
-//           }
-//				microgear.chat("htmlgear","Hello from myself at "+Date.now());
-//			},5000);
 		});
 
 		microgear.on('present', function(event) {

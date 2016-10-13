@@ -20,10 +20,10 @@ Connection:
 #include <ESP8266WiFi.h>
 #include <EEPROM.h>
 
-//const char* ssid     = "BAZ";
-//const char* password = "gearman1";
-const char* ssid     = "ZAB";
-const char* password = "Gearman1";
+const char* ssid     = "BAZ";
+const char* password = "gearman1";
+//const char* ssid     = "ZAB";
+//const char* password = "Gearman1";
 
 #define APPID       "PUDZAHydro"
 #define GEARKEY     "CU0a1cfd4wTW8JI"
