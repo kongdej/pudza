@@ -37,6 +37,8 @@ MicroGear microgear(client);
 
 BH1750 lightMeter;
 
+int relayPin[] = {5,6,7,8};
+
 void onMsghandler(char *topic, uint8_t* msg, unsigned int msglen) {
   Serial.print("Incoming message --> ");
   Serial.print(topic);
@@ -47,6 +49,15 @@ void onMsghandler(char *topic, uint8_t* msg, unsigned int msglen) {
     Serial.print((char)msg[i]);
   }
   Serial.println();
+  String stateStr = String(strState).substring(0,msglen);
+  if (topic == "/PUDZAHydro/mist"){
+    if (stateStr == "ON") {
+      digitalWrite(relayPin[0],HIGH);
+    }
+    else if (stateStr == "OFF") {
+      digitalWrite(relayPin[0],LOW);
+    }
+  }
 }
 
 void onConnected(char *attribute, uint8_t* msg, unsigned int msglen) {
@@ -54,11 +65,17 @@ void onConnected(char *attribute, uint8_t* msg, unsigned int msglen) {
   microgear.setName("nodemcu");
   microgear.setAlias(ALIAS);
   microgear.subscribe("/nodemcu/lux");
+  microgear.subscribe("/mist");
 }
 
 void setup(){
   Serial.begin(9600);
   lightMeter.begin();
+
+  for (int i=0;i<4;i++) {
+    pinMode(relayPin[i],OUTPUT);
+    digitalWrite(relayPin[i],HIGH);
+  }
   
   microgear.on(MESSAGE,onMsghandler);
   microgear.on(CONNECTED,onConnected);

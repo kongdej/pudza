@@ -57,7 +57,7 @@
 		microgear.on('connected', function() {
 			microgear.setAlias(ALIAS);
 			document.getElementById("data").innerHTML = "Connected to netpie...";
-            microgear.subscribe("/raspipython/eccal");
+            microgear.subscribe("/eccal");
             microgear.subscribe("/uno/amptemp");
             microgear.subscribe("/uno/amphum");
             microgear.subscribe("/uno/wtrtemp");
