@@ -108,11 +108,11 @@
         });
         $("#miston").click(function () {
             console.log("on");
-            microgear.chat ("nodemcu", "ON");
+            microgear.publish ("/mist", "ON");
         });
         $("#mistoff").click(function () {
             console.log("off");
-            microgear.publish ("nodemcu", "OFF");
+            microgear.publish ("/mist", "OFF");
         });
 
     });
