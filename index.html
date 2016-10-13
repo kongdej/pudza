@@ -66,6 +66,7 @@
             microgear.subscribe("/uno/rain");
             microgear.subscribe("/uno/ec");
             microgear.subscribe("/nodemcu/lux");
+            microgear.subscribe("/mist");
 		});
 
 		microgear.on('present', function(event) {
@@ -95,15 +96,24 @@
 <div id="gauge4"></div>  
 <div id="gauge5"></div>  
 <div id="gauge6"></div>  
-
+<button id="miston">ON</button>
+<button id="mistoff">OFF</button>
 
 <script type="text/javascript">
     $( document ).ready(function() {
         $("#cb").click(function () {
             console.log($('#ec_cal').val());
-//            microgear.chat("/plant", $("#ec_cal").value());
             microgear.publish ("/eccal", $('#ec_cal').val());
         });
+        $("#miston").click(function () {
+            console.log("on");
+            microgear.publish ("/mist", "ON");
+        });
+        $("#mistoff").click(function () {
+            console.log("off");
+            microgear.publish ("/mist", "OFF");
+        });
+
     });
 
     var g1 = new JustGage({

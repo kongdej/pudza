@@ -139,16 +139,6 @@ void loop()
      if (cmd == "1") { // EC Calibration
         CalibrationEC = val.toFloat();
         doCalibration();
-/*        Serial.print(message);
-        Serial.print(" <=> ");
-        Serial.println(EC);
-        delay(1000);
-        Serial.println("text1...");
-        delay(1000);
-        Serial.println("text2...");
-        delay(1000);
-        Serial.println("text3...");
-*/
       }     
   }
 }
