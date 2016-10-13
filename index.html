@@ -37,7 +37,7 @@
             else if (topic == "/PUDZAHydro/uno/soilhum") {
                 g4.refresh(msg);
             }
-            else if (topic == "/PUDZAHydro/nodemcu/rain") {
+            else if (topic == "/PUDZAHydro/uno/rain") {
                 g5.refresh(msg);
             }
             else if (topic == "/PUDZAHydro/uno/flow") {
@@ -63,9 +63,9 @@
             microgear.subscribe("/uno/wtrtemp");
             microgear.subscribe("/uno/flow");
             microgear.subscribe("/uno/soilhum");
-//            microgear.subscribe("/uno/rain");
+            microgear.subscribe("/uno/rain");
             microgear.subscribe("/uno/ec");
-            microgear.subscribe("/nodemcu/rain");
+//            microgear.subscribe("/nodemcu/rain");
             microgear.subscribe("/nodemcu/lux");
             microgear.subscribe("/mist");
 		});
