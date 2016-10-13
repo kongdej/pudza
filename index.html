@@ -23,7 +23,7 @@
 
 		microgear.on('message',function(topic,msg) {
 			// debug
-           document.getElementById("data").innerHTML = topic+"--"+msg;
+ //          document.getElementById("data").innerHTML = topic+"--"+msg;
 //            var vals = msg.split(",");
             if (topic == "/PUDZAHydro/uno/amptemp") {
                 g1.refresh(msg);
