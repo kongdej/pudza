@@ -16,7 +16,7 @@ microgear.create(gearkey,gearsecret,appid,{'debugmode': True})
 
 def connection():
   print "Now I am connected with netpie"
-  payload = {'Value1': 'text1..', 'Value2': 'text2..', 'Value3': 'text3..'}
+  payload = {'Value1': 'Now Pudza BOT is connected.'}
   r = requests.post(url, data=payload)
 
 def subscription(topic,message):
