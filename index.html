@@ -49,6 +49,9 @@
             else if (topic == "/PUDZAHydro/nodemcu/lux") {
                 g8.refresh(msg);
             }
+            else if (topic == "/PUDZAHydro/nodemcu/temp") {
+                g9.refresh(msg);
+            }
             else {
                 document.getElementById("data").innerHTML = topic+"--"+msg;
             }
@@ -65,7 +68,7 @@
             microgear.subscribe("/uno/soilhum");
             microgear.subscribe("/uno/rain");
             microgear.subscribe("/uno/ec");
-//            microgear.subscribe("/nodemcu/rain");
+            microgear.subscribe("/nodemcu/temp");
             microgear.subscribe("/nodemcu/lux");
             microgear.subscribe("/mist");
 		});
@@ -90,6 +93,7 @@
 <button id="cb">Calibrate EC</button>
 <hr><div id="data">_____</div>
 <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/170643/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line"></iframe>
+<div id="gauge9"></div>  
 <div id="gauge8"></div>  
 <div id="gauge7"></div>  
 <div id="gauge1"></div>  
@@ -200,6 +204,15 @@
 //        donut: true,
         title: "Light",
         label:"Lux"
+     });
+     var g9 = new JustGage({
+        id: "gauge9",
+        value: 0,
+        min: 0,
+        max: 100,
+        decimals:2,
+        title: "Gutter Temperature",
+        label:"Deg C"
      });
 </script>
 </body>
