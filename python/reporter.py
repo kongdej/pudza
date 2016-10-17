@@ -13,6 +13,7 @@ urlThingspeak = "https://api.thingspeak.com/update.json"
 api_key = "MHTC88ZRMETT82P9"
 
 lux=""
+temp=""
 
 microgear.create(gearkey,gearsecret,appid,{'debugmode': True})
 
@@ -23,15 +24,20 @@ def connection():
 
 def subscription(topic,message):
   print topic+" "+message
-  lux = message
+  if topic == "/PUDZAHydro/nodemcu/lux" :
+    lux = message
+  if topic == "/PUDZAHydro/nodemcu/temp" :
+    temp = message
   y,m,d,h,mi,s,wd,wy,isd=time.gmtime()  
-  if mi == 12 and s == 0:
-    payload = {'value1': 'Light = '+ lux + ' lux'}
+#  if s%15 == 0:
+  payload = {'api_key': api_key, 'field1' : str(message)}
+  r = requests.post(urlThingspeak,params=payload)
+  print r.text
+  
+  if mi == 9 and s == 0:
+    print "@%s send to line" % mi
+    payload = {'value1': 'Light = '+ lux + ' lux<br>'+'Temp = '+ temp + ' C'}
     r = requests.post(url, data=payload)
-  if s%15 == 0:
-    payload = {'api_key': api_key, 'field1' : str(message)}
-    r = requests.post(urlThingspeak,params=payload)
-    print r.text
 
 def disconnect():
   print "disconnect is work"
@@ -41,4 +47,8 @@ microgear.on_connect = connection
 microgear.on_message = subscription
 microgear.on_disconnect = disconnect
 microgear.subscribe("/nodemcu/lux")
+microgear.subscribe("/nodemcu/temp")
 microgear.connect(True)
+
+
+  
