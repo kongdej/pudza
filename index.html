@@ -23,7 +23,7 @@
 
 		microgear.on('message',function(topic,msg) {
 			// debug
-//           document.getElementById("data").innerHTML = topic+"--"+msg;
+           document.getElementById("data").innerHTML = topic+"--"+msg;
 //            var vals = msg.split(",");
             if (topic == "/PUDZAHydro/uno/amptemp") {
                 g1.refresh(msg);
@@ -46,8 +46,10 @@
             else if (topic == "/PUDZAHydro/uno/ec") {
                 g7.refresh(msg);
             }
-            else if (topic == "/PUDZAHydro/nodemcu/lux") {
-                g8.refresh(msg);
+            else if (topic == "/PUDZAHydro/nodemcu") {
+            	var vals = msg.split(",");
+                g8.refresh(vals[0]);
+                g9.refresh(vals[1]);
             }
             else {
                 document.getElementById("data").innerHTML = topic+"--"+msg;
@@ -65,7 +67,7 @@
             microgear.subscribe("/uno/soilhum");
             microgear.subscribe("/uno/rain");
             microgear.subscribe("/uno/ec");
-            microgear.subscribe("/nodemcu/lux");
+            microgear.subscribe("/nodemcu");
             microgear.subscribe("/mist");
 		});
 
@@ -88,6 +90,7 @@
 <input type="textbox" id="ec_cal" value="2.5"></input>
 <button id="cb">Calibrate EC</button>
 <hr><div id="data">_____</div>
+<div id="gauge9"></div>  
 <div id="gauge8"></div>  
 <div id="gauge7"></div>  
 <div id="gauge1"></div>  
@@ -198,6 +201,15 @@
 //        donut: true,
         title: "Light",
         label:"Lux"
+     });
+     var g9 = new JustGage({
+        id: "gauge9",
+        value: 0,
+        min: 0,
+        max: 100,
+        decimals:2,
+        title: "Temperture",
+        label:"DegC"
      });
 </script>
 </body>
