@@ -51,6 +51,9 @@
                 g8.refresh(vals[0]);
                 g9.refresh(vals[1]);
             }
+            else if (topic == "/PUDZAHydro/nodemcu/temp") {
+                g9.refresh(msg);
+            }
             else {
                 document.getElementById("data").innerHTML = topic+"--"+msg;
             }
@@ -68,6 +71,9 @@
             microgear.subscribe("/uno/rain");
             microgear.subscribe("/uno/ec");
             microgear.subscribe("/nodemcu");
+//            microgear.subscribe("/nodemcu/temp");
+//            microgear.subscribe("/nodemcu/lux");
+
             microgear.subscribe("/mist");
 		});
 
