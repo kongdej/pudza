@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PUDZA Dashboard</title>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/raphael-2.1.4.min.js"></script>
+    <script src="js/justgage.js"></script>
+	<script src="js/microgear.js"></script>
+
+	<script>
+		const APPID = "PUDZAHydro";
+		const KEY = "BwBRekvWcYFkRGJ";
+		const SECRET = "sDJCEcobv9l66aoB0LkaZl4HE";
+
+		const ALIAS = "htmlgear";
+
+		var microgear = Microgear.create({
+			key: KEY,
+			secret: SECRET,
+			alias : ALIAS
+		});
+
+		microgear.on('message',function(topic,msg) {
+			// debug
+           document.getElementById("data").innerHTML = topic+"--"+msg;
+//            var vals = msg.split(",");
+            if (topic == "/PUDZAHydro/uno/amptemp") {
+                g1.refresh(msg);
+            }
+            else if (topic == "/PUDZAHydro/uno/amphum") {
+                g2.refresh(msg);
+            }
+            else if (topic == "/PUDZAHydro/uno/wtrtemp") {
+                g3.refresh(msg);
+            }
+            else if (topic == "/PUDZAHydro/uno/soilhum") {
+                g4.refresh(msg);
+            }
+            else if (topic == "/PUDZAHydro/uno/rain") {
+                g5.refresh(msg);
+            }
+            else if (topic == "/PUDZAHydro/uno/flow") {
+                g6.refresh(msg);
+            }
+            else if (topic == "/PUDZAHydro/uno/ec") {
+                g7.refresh(msg);
+            }
+            else if (topic == "/PUDZAHydro/nodemcu") {
+            	var vals = msg.split(",");
+                g8.refresh(vals[0]);
+                g9.refresh(vals[1]);
+            }
+            else if (topic == "/PUDZAHydro/nodemcu/temp") {
+                g9.refresh(msg);
+            }
+            else {
+                document.getElementById("data").innerHTML = topic+"--"+msg;
+            }
+		});
+
+		microgear.on('connected', function() {
+			microgear.setAlias(ALIAS);
+			document.getElementById("data").innerHTML = "Connected to netpie...";
+            microgear.subscribe("/eccal");
+            microgear.subscribe("/uno/amptemp");
+            microgear.subscribe("/uno/amphum");
+            microgear.subscribe("/uno/wtrtemp");
+            microgear.subscribe("/uno/flow");
+            microgear.subscribe("/uno/soilhum");
+            microgear.subscribe("/uno/rain");
+            microgear.subscribe("/uno/ec");
+            microgear.subscribe("/nodemcu");
+//            microgear.subscribe("/nodemcu/temp");
+//            microgear.subscribe("/nodemcu/lux");
+
+            microgear.subscribe("/mist");
+		});
+
+		microgear.on('present', function(event) {
+			console.log(event);
+		});
+
+		microgear.on('absent', function(event) {
+			console.log(event);
+		});
+
+		microgear.resettoken(function(err) {
+			microgear.connect(APPID);
+		});
+	</script>
+
+
+</head>
+<body>
+<input type="textbox" id="ec_cal" value="2.5"></input>
+<button id="cb">Calibrate EC</button>
+<hr><div id="data">_____</div>
+<div id="gauge9"></div>  
+<div id="gauge8"></div>  
+<div id="gauge7"></div>  
+<div id="gauge1"></div>  
+<div id="gauge3"></div>  
+<div id="gauge2"></div>  
+<div id="gauge4"></div>  
+<div id="gauge5"></div>  
+<div id="gauge6"></div>  
+<button id="miston">ON</button>
+<button id="mistoff">OFF</button>
+
+<script type="text/javascript">
+    $( document ).ready(function() {
+        $("#cb").click(function () {
+            console.log($('#ec_cal').val());
+            microgear.publish ("/eccal", $('#ec_cal').val());
+        });
+        $("#miston").click(function () {
+            console.log("on");
+            microgear.publish ("/mist", "ON");
+        });
+        $("#mistoff").click(function () {
+            console.log("off");
+            microgear.publish ("/mist", "OFF");
+        });
+
+    });
+
+    var g1 = new JustGage({
+        id: "gauge1",
+        value: 0,
+        min: 0,
+        max: 100,
+        decimals:2,
+        title: "Ambient Temperture",
+        label:"DegC"
+     });
+
+    var g2 = new JustGage({
+        id: "gauge2",
+        value: 0,
+        min: 0,
+        max: 100,
+//        counter: true,
+//        formatNumber:true,
+        donut: true,
+        title: "Ambient Humidity",
+        label:"%"
+     });
+     var g3 = new JustGage({
+        id: "gauge3",
+        value: 0,
+        min: 0,
+        max: 100,
+        decimals:2,
+        title: "Water Temperture",
+        label:"DegC"
+     });
+
+     var g4 = new JustGage({
+        id: "gauge4",
+        value: 0,
+        min: 0,
+        max: 100,
+        decimals:2,
+        donut: true,
+        title: "Soil Moisture",
+        label:"%"
+     });
+     var g5 = new JustGage({
+        id: "gauge5",
+        value: 0,
+        min: 0,
+        max: 100,
+        decimals:2,
+        donut: true,
+        title: "Rain",
+        label:"%"
+     });
+     var g6 = new JustGage({
+        id: "gauge6",
+        value: 0,
+        min: 0,
+        max: 10,
+        decimals:2,
+//        donut: true,
+        title: "Flow Rate",
+        label:"L/min"
+     });
+
+     var g7 = new JustGage({
+        id: "gauge7",
+        value: 0,
+        min: 0,
+        max: 10,
+        decimals:2,
+//        donut: true,
+        title: "EC",
+        label:"mS/cm"
+     });
+
+     var g8 = new JustGage({
+        id: "gauge8",
+        value: 0,
+        min: 0,
+        max: 65365,
+//        decimals:2,
+//        donut: true,
+        title: "Light",
+        label:"Lux"
+     });
+     var g9 = new JustGage({
+        id: "gauge9",
+        value: 0,
+        min: 0,
+        max: 100,
+        decimals:2,
+        title: "Temperture",
+        label:"DegC"
+     });
+</script>
+</body>
+</html>
+<!-- Note
+Sensors
+
+INPUT
+	- ambient temperature dht21
+	- ambient Humidity dht21
+	- water temperature
+	- EC
+	- ambient light
+	- water flow 
+	- rain
+	- soil humidity
+	- motion sensor
+
+OUTPUT
+	- relay
+
+-->
