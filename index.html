@@ -18,15 +18,11 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="shortcut icon" href="images/ico/pudza.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-
-
-   
-
 </head><!--/head-->
 
 <body class="homepage">
@@ -34,110 +30,153 @@
     <header id="header">
         <nav class="navbar navbar-inverse" role="banner">
             <div class="container">
-                <h2 class="top-number pull-left"><i class="top-number fa fa-sun-o"></i> PUDZA Project</h2>
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>                    
-                </div>
+                <h1 class="top-number pull-left"><i class="top-number fa fa-signal"></i> Hydroponics Control and Information</h1>
             </div><!--/.container-->
         </nav><!--/nav-->
     </header><!--/header-->
 
+    <sction>
+        <div class="" id="data"></div>        
+    </sction>
+
     <section id="middle">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 wow fadeInDown">
-                    <div class="skill">
-                        <h2><i class="fa fa-clock-o"></i> <span id="updated"></span></h2>
-
-                        <div class="progress-wrap">
-                            <h2>Zone A</h2>
-                                <div class="progress">
-                                  <div id="zoneAbar" class="progress-bar  color1" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                                    <span id="zoneAvalue" class="bar-width"></span>
-                                  </div>
-                            </div>
-                        </div>
-
-                        <div class="progress-wrap">
-                            <h2>Zone B</h2>
-                            <div class="progress">
-                              <div id="zoneBbar" class="progress-bar color2" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                               <span id="zoneBvalue" class="bar-width"></span>
-                              </div>
-                            </div>
-                        </div>
-
-                        <div class="progress-wrap">
-                            <h2>Zone C</h2>
-                            <div class="progress">
-                              <div id="zoneCbar" class="progress-bar color3" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                                <span id="zoneCvalue" class="bar-width"></span>
-                              </div>
-                            </div>
-                        </div>
-
-                        <div class="progress-wrap">
-                            <h2>Zone D&E</h2>
-                            <div class="progress">
-                              <div id="zoneDbar" class="progress-bar color4" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
-                                <span id="zoneDvalue" class="bar-width"></span>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>Average Temperature : <span id="temperatrue"></span> DegC</div>
-                    <div>Average Irradiance  : <span id="irradiance"></span> W/m2</div>
-                    <div>Total Generating Capacity  : <span id="totalgen"></span> MWh</div>
-                    <p></p>
-                </div><!--/.col-sm-6-->
+                
 
                 <div class="col-sm-6 wow fadeInDown">
-                    <div class="accordion">
-                        <div class="panel-group" id="accordion1">
-                          <div class="panel panel-default">
-                            <div class="panel-heading active">
-                              <h3 class="panel-title">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">
-                                  Generating Power
-                                  <i class="fa fa-angle-right pull-right"></i>
-                                </a>
-                              </h3>
-                            </div>
-
-                            <div id="collapseOne1" class="panel-collapse collapse in">
-                              <div class="panel-body">
-                                  <div class="media accordion-inner">
-                                        <div style="margin:0 auto; width:250px">
-                                        <div id="gauge1"></div>   
-                                        <div id="gauge2"></div>   
-                                        </div>
-
-                                    </div>
-                              </div>
-                          </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <div id="gaugeEC"></div>   
+                            <div id="gaugeLight"></div>   
+                            <div id="gaugeABTemp"></div>   
+                        </div>
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-5">
+                            <div id="gaugeFlow"></div>   
+                            <div id="gaugeATemp"></div>   
+                            <div id="gaugeGTemp"></div>   
+                        </div>
                     </div>
+<hr>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div id="gaugeHum"></div>   
+                        </div>
+                        <div class="col-sm-4">
+                            <div id="gaugeSoil"></div>   
+                        </div>
+                        <div class="col-sm-4">
+                            <div id="gaugeRain"></div>   
+                        </div>
+                    </div>
+
+                
                 </div>
 
+                <div class="col-sm-1"></div>
+                <div class="col-sm-5 wow fadeInDown">
+                    
+                    <div class="accordion">
+                        <div class="panel-group" id="accordion1">
+                            <div class="panel panel-default">                            
+                                <div class="panel-heading active">
+                                  <h3 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">
+                                       Live
+                                      <i class="fa fa-angle-right pull-right"></i>
+                                    </a>
+                                  </h3>
+                                </div>
+                                <div id="collapseOne1" class="panel-collapse collapse in">
+                                  <div class="panel-body">
+                                      <div class="media accordion-inner">
+                                        <img src="images/camera.jpg" height="200" width="420" alt="">
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+<br>
+                    <div class="accordion">
+                        <div class="panel-group" id="accordion1">
+                            <div class="panel panel-default">                            
+                                <div class="panel-heading active">
+                                  <h3 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseOne3" >
+                                       Calibrate EC
+                                      <i class="fa fa-angle-right pull-right"></i>
+                                    </a>
+                                  </h3>
+                                </div>
+                                <div id="collapseOne3" class="panel-collapse collapse in">
+                                  <div class="panel-body">
+                                      <div class="media accordion-inner">
+
+                                                
+                                                <div class="form-group">
+                                                    <div class="row"> 
+                                                        <div class="col-sm-8">
+                                                            <input type="text" class="form-control" id="ec_cal">
+                                                        </div>
+                                                        <div class="col-sm-4">                                                    
+                                                            <button type="submit" class="btn btn-primary btn-lg" id="cb">Start</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+<br>
+                    <div class="accordion">
+                        <div class="panel-group" id="accordion2">
+                            <div class="panel panel-default">                            
+                                <div class="panel-heading active">
+                                  <h3 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2">
+                                       Trend Log
+                                      <i class="fa fa-angle-right pull-right"></i>
+                                    </a>
+                                  </h3>
+                                </div>
+                                <div id="collapseOne2" class="panel-collapse collapse in">
+                                  <div class="panel-body">
+                                      <div class="media accordion-inner">
+                                      
+
+<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/106456/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Temperature&type=spline"></iframe>
+
+
+
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div> 
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#middle-->
 
   
 
-    <section id="bottom">
-       
-    </section><!--/#bottom-->
-
     <footer id="footer" class="midnight-blue">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    &copy; 2016 <a target="_blank" href="http://shapebootstrap.net/" title="">EGAT</a>. All Rights Reserved.
+                    &copy; 2016-2017 <a target="_blank" href="http://shapebootstrap.net/" title="">PUDZA Working Group</a>. All Rights Reserved.
                 </div>
                 <div class="col-sm-6">
                     <ul class="pull-right">
@@ -159,105 +198,7 @@
     <script src="js/wow.min.js"></script>
     <script src="js/raphael-2.1.4.min.js"></script>
     <script src="js/justgage.js"></script>
-    <script>
-
-    function customValue(val) {
-        return val;        
-    }
-
-    var g1 = new JustGage({
-        id: "gauge1",
-        value: 0,
-        value:0,
-        min: 0,
-        max: 4000,
-        relativeGaugeSize: true,
-        counter: true,
-        formatNumber:true,
-//        humanFriendly: true,
-//        pointer: true,
-//        symbol: '%',
-        gaugeWidthScale: .8,
-//        textRenderer: customValue,
-        title: "Current Active Power",
-        label:"KW"
-      });
-
-    var g2 = new JustGage({
-        id: "gauge2",
-        value: 0,
-        min: 0,
-        max: 10000,
-        counter: true,
-        relativeGaugeSize: true,
-        comas:true,
-        formatNumber:true,
-        gaugeWidthScale: .8,
- //       humanFriendly: true,
-//      pointer: true,
-//        textRenderer: customValue,
-        title: "Today Generating Capacity",
-        label:"hKW"
-      });
-
-    url = "http://localhost/sp";
-    setInterval(function () {
-        $.getJSON( url, function( data ) {
-            console.log(data);
-            var w=wd=we=0;
-
-            var date = data.lastmodified.split('T');
-            var time = date[1].split('.');
-            var date = date[0].replace(/-/g, '/');
-            $("#updated").html(date + ' - ' + time[0]);
-            for(var i=0; data.data.length; i++) {
-                //console.log(data.data[i].oid);
-      
-                if (data.data[i].oid == '4222124661211148') {
-                    $("#totalgen").html(data.data[i].value);
-                }
-                if (data.data[i].oid == '4222124661080076') {
-                    g1.refresh(data.data[i].value);
-                }
-                if (data.data[i].oid == '4222124661145612') {
-                    g2.refresh(data.data[i].value);
-                }
-                if (data.data[i].oid == '4222125049970691') {
-                    $("#temperatrue").html(data.data[i].value);
-                }
-                if (data.data[i].oid == '4222125050036227') {
-                    $("#irradiance").html(data.data[i].value);
-                }
-                if (data.data[i].oid == '4222125050167299') {
-                 //   console.log(data.data[i].value);
-                    w=data.data[i].value/10;
-                    document.getElementById("zoneAbar").style.width=w.toString()+'%';
-                    $("#zoneAvalue").html(data.data[i].value.toString()+' KW');
-                }
-                if (data.data[i].oid == '4222125050429443') {
-                //    console.log(data.data[i].value);
-                    w=data.data[i].value/10;
-                    document.getElementById("zoneBbar").style.width=w.toString()+'%';
-                    $("#zoneBvalue").html(data.data[i].value.toString()+' KW');
-                }
-                if (data.data[i].oid == '4222125050691587') {
-                //  console.log(data.data[i].value);
-                    w=data.data[i].value/10;
-                    document.getElementById("zoneCbar").style.width=w.toString()+'%';
-                    $("#zoneCvalue").html(data.data[i].value.toString()+' KW');
-                }
-                if (data.data[i].oid == '4222125050953731') {
-                    wd=data.data[i].value;
-                    w=(wd+we)/10;
-                    document.getElementById("zoneDbar").style.width=w.toString()+'%';
-                    $("#zoneDvalue").html((we+wd).toString()+' KW');
-                }
-
-            }
-        });
-
-    },3000);
-
-    </script>
+    <script src="js/microgear.js"></script>
+    <script src="pudza.js"></script>
 </body>
 </html>
