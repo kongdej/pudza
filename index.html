@@ -30,7 +30,7 @@
     <header id="header">
         <nav class="navbar navbar-inverse" role="banner">
             <div class="container">
-                <h1 class="top-number pull-left"><i class="top-number fa fa-signal"></i> Hydroponics Control and Information</h1>
+                <h1 class="top-number pull-left"><i class="top-number fa fa-signal"></i>PUDZA - Hydroponics Automation</h1>
             </div><!--/.container-->
         </nav><!--/nav-->
     </header><!--/header-->
@@ -47,13 +47,12 @@
                 <div class="col-sm-6 wow fadeInDown">
                     
                     <div class="row">
-                        <div class="col-sm-5">
+                        <div class="col-sm-6">
                             <div id="gaugeEC"></div>   
                             <div id="gaugeLight"></div>   
                             <div id="gaugeABTemp"></div>   
                         </div>
-                        <div class="col-sm-2"></div>
-                        <div class="col-sm-5">
+                        <div class="col-sm-6">
                             <div id="gaugeFlow"></div>   
                             <div id="gaugeATemp"></div>   
                             <div id="gaugeGTemp"></div>   
@@ -107,7 +106,7 @@
                                 <div class="panel-heading active">
                                   <h3 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseOne3" >
-                                       Calibrate EC
+                                       Control Panel
                                       <i class="fa fa-angle-right pull-right"></i>
                                     </a>
                                   </h3>
@@ -135,35 +134,6 @@
                         </div>
                     </div>
 
-<br>
-                    <div class="accordion">
-                        <div class="panel-group" id="accordion2">
-                            <div class="panel panel-default">                            
-                                <div class="panel-heading active">
-                                  <h3 class="panel-title">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2">
-                                       Trend Log
-                                      <i class="fa fa-angle-right pull-right"></i>
-                                    </a>
-                                  </h3>
-                                </div>
-                                <div id="collapseOne2" class="panel-collapse collapse in">
-                                  <div class="panel-body">
-                                      <div class="media accordion-inner">
-                                      
-
-<iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/106456/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Temperature&type=spline"></iframe>
-
-
-
-                                      </div>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
 
                 </div> 
             </div><!--/.row-->
@@ -171,7 +141,44 @@
     </section><!--/#middle-->
 
   
+    <section>
+            <div class="container">
+                <div class="accordion">
+                    <div class="panel-group" id="accordion2">
+                        <div class="panel panel-default">                            
+                            <div class="panel-heading active">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2">
+                                   Trend Log
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseOne2" class="panel-collapse collapse in">
+                              <div class="panel-body">
+                                  <div class="media accordion-inner">
+                                        
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/170643/charts/7?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=EC&type=line&xaxis=Time&yaxis=mS%2Fcm"></iframe>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/170643/charts/6?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Flow&type=line&xaxis=Time&yaxis=L%2Fmin"></iframe>
+                                            </div>
+                                    </div>
 
+                                  </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+    </section>
+        
+    </section>
     <footer id="footer" class="midnight-blue">
         <div class="container">
             <div class="row">
@@ -199,6 +206,6 @@
     <script src="js/raphael-2.1.4.min.js"></script>
     <script src="js/justgage.js"></script>
     <script src="js/microgear.js"></script>
-    <script src="pudza.js"></script>
+    <script src="default.js"></script>
 </body>
 </html>

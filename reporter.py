@@ -14,21 +14,21 @@ url = "https://maker.ifttt.com/trigger/%s/with/key/dJaghatn9VW74F57cTVwdj" % eve
 urlThingspeak = "https://api.thingspeak.com/update.json"
 api_key = "MHTC88ZRMETT82P9"
 
-lux=""
-temp=""
-amptemp="0"
-amphum=""
-wtrtemp=""
-soilhum=""
-rain=""
-flow=""
-ec=""
+lux="1"
+temp="2"
+amptemp="3"
+amphum="4"
+wtrtemp="5"
+soilhum="6"
+rain="7"
+flow="8"
+ec="9"
 
 microgear.create(gearkey,gearsecret,appid,{'debugmode': True})
 
 def connection():
   print "Now I am connected with netpie"
-  payload = {'value1': 'Now Pudza BOT is connected.'}
+  payload = {'value1': 'PUDZA BOT is connected.'}
   r = requests.post(url, data=payload,verify=False)
 
 def subscription(topic,message):
@@ -39,8 +39,6 @@ def subscription(topic,message):
     lux = message
   if topic == "/PUDZAHydro/nodemcu/temp" :
     temp = message
-  y,m,d,h,mi,s,wd,wy,isd=time.gmtime()  
-#  if s%15 == 0:
   if topic == "/uno/amptemp" :
     amptemp = message
   if topic == "/uno/amphum" :
@@ -55,17 +53,7 @@ def subscription(topic,message):
     flow = message
   if topic == "/uno/ec" :
     ec = message
-
-  if s % 15 == 0:
-    payload = {'api_key': api_key, 'field1' : amptemp,'field2' : amphum,'field3' : str(wtrtemp),'field4' : str(soilhum),'field5' : str(rain),'field6' : str(flow),'field7' : str(ec)}
-    r = requests.post(urlThingspeak,params=payload,verify=False)
-    print r.text
-
-  
-#  if mi == 9 and s == 0:
-#    print "@%s send to line" % mi
-#    payload = {'value1': 'Light = '+ lux + ' lux<br>'+'Temp = '+ temp + ' C'}
-#    r = requests.post(url, data=payload)
+   
 
 def disconnect():
   print "disconnect is work"
@@ -83,7 +71,31 @@ microgear.subscribe("/uno/flow");
 microgear.subscribe("/uno/soilhum");
 microgear.subscribe("/uno/rain");
 microgear.subscribe("/uno/ec");
-microgear.connect(True)
+microgear.connect(False)
+
+while True:
+  y,m,d,h,mi,s,wd,wy,isd=time.gmtime()  
+  if s % 15 == 0:
+    payload = {'api_key': api_key, 'field1' : amptemp,'field2' : amphum,'field3' : str(wtrtemp),'field4' : str(soilhum),'field5' : str(rain),'field6' : str(flow),'field7' : str(ec),'field8' : str(lux)}
+    r = requests.post(urlThingspeak,params=payload,verify=False)
+    print r.text
+
+  if mi == 0 and s == 0:
+    print "@%s send to line" % mi
+    v1 = 'PUDZA Report'
+    v2 = 'Time = '+str(d)+'-'+str(m)+'-'+str(y)+' @ '+str(h)+':'+str(mi)
+    v3 = 'EC = '+ ec + ' mS/cm<br>'
+    v3+= 'Flow = '+ flow +' L/min<br>'
+    v3+= 'Air Temp = '+ amptemp +' C<br>'
+    v3+= 'Humidity = '+ amphum  +' %<br>'
+    v3+= 'WTR Temp = '+ wtrtemp +' C<br>'
+    v3+= 'Light = '   + lux +' lux<br>'
+    v3+= 'Rain  = '+ rain +' %<br>'
+
+    payload = {'value1': v1, 'value2': v2, 'value3': v3}
+    r = requests.post(url, data=payload,verify=False)
+    print r.text
+   
 
 
   
