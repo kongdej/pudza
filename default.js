@@ -12,7 +12,7 @@
         relativeGaugeSize: true,
         gaugeWidthScale: 1,
         decimals:2,
-        title: "EC",
+        title: "Fertilizer EC",
         label:"mS/cm",
         titlePosition: "below",
         titleFontSize: "5px",
@@ -28,8 +28,8 @@
         relativeGaugeSize: true,
         gaugeWidthScale: 1,
         decimals:true,
-        title: "Flow",
-        label:"l/min",
+        title: "Water Flow",
+        label:"L/min",
         titlePosition: "below"
       });
     var g_light = new JustGage({
@@ -88,7 +88,7 @@
         relativeGaugeSize: true,
         decimals:true,
         gaugeWidthScale: 1,
-        title: "AB Temperature",
+        title: "Fertilizer Temperature",
         label:"DegC",
         titlePosition: "below"        
       });
@@ -103,7 +103,7 @@
         donut:true,
         gaugeWidthScale: 1,
         decimals:true,
-        title: "Humidity",
+        title: "Ambient Humidity",
         label:"%",
         titlePosition: "below"        
       });
