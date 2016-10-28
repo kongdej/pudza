@@ -73,7 +73,8 @@ microgear.connect(False)
 
 alrain = 1
 while True:
-  y,m,d,h,mi,s,wd,wy,isd=time.gmtime()  
+  y,m,d,h,mi,s,wd,wy,isd = time.localtime() 
+
   if s % 15 == 0:
     payload = {'api_key': api_key, 'field1' : amptemp,'field2' : amphum,'field3' : str(wtrtemp),'field4' : str(soilhum),'field5' : str(rain),'field6' : str(flow),'field7' : str(ec),'field8' : str(lux)}
     r = requests.post(urlThingspeak,params=payload,verify=False)
@@ -87,7 +88,14 @@ while True:
     r = requests.post(url, data=payload,verify=False)
     print r.text
     alrain = 0
-  else :
+
+  if float(rain) < 30 and alrain == 0:
+    v1 = 'Rain STOP!'
+    v2 = 'Time = '+str(d)+'-'+str(m)+'-'+str(y)+' @ '+str(h)+':'+str(mi)
+    v3 = 'Rain  = '+ rain +' %<br>'    
+    payload = {'value1': v1, 'value2': v2, 'value3': v3}
+    r = requests.post(url, data=payload,verify=False)
+    print r.text
     alrain = 1
   
   if s % 59 == 0:
