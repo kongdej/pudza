@@ -14,15 +14,15 @@ url = "https://maker.ifttt.com/trigger/%s/with/key/dJaghatn9VW74F57cTVwdj" % eve
 urlThingspeak = "https://api.thingspeak.com/update.json"
 api_key = "MHTC88ZRMETT82P9"
 
-lux="1"
-temp="2"
-amptemp="3"
-amphum="4"
-wtrtemp="5"
-soilhum="6"
-rain="7"
-flow="8"
-ec="9"
+lux="0"
+temp="0"
+amptemp="0"
+amphum="0"
+wtrtemp="0"
+soilhum="0"
+rain="0"
+flow="0"
+ec="0"
 
 microgear.create(gearkey,gearsecret,appid,{'debugmode': True})
 
@@ -32,26 +32,25 @@ def connection():
   r = requests.post(url, data=payload,verify=False)
 
 def subscription(topic,message):
-  global amptemp,amphum,wtrtemp,soilhum,rain,flow,ec
+  global amptemp,amphum,wtrtemp,soilhum,rain,flow,ec,lux,temp
 
   print topic+" "+message
-  if topic == "/PUDZAHydro/nodemcu/lux" :
-    lux = message
-  if topic == "/PUDZAHydro/nodemcu/temp" :
-    temp = message
-  if topic == "/uno/amptemp" :
+
+  if topic == "/PUDZAHydro/nodemcu" :
+    lux,temp = message.split(",");
+  if topic == "/PUDZAHydro/uno/amptemp" :
     amptemp = message
-  if topic == "/uno/amphum" :
+  if topic == "/PUDZAHydro/uno/amphum" :
     amphum = message
-  if topic == "/uno/wtrtemp" :
+  if topic == "/PUDZAHydro/uno/wtrtemp" :
     wtrtemp = message
-  if topic == "/uno/soilhum" :
+  if topic == "/PUDZAHydro/uno/soilhum" :
     soilhum = message
-  if topic == "/uno/rain" :
+  if topic == "/PUDZAHydro/uno/rain" :
     rain = message
-  if topic == "/uno/flow" :
+  if topic == "/PUDZAHydro/uno/flow" :
     flow = message
-  if topic == "/uno/ec" :
+  if topic == "/PUDZAHydro/uno/ec" :
     ec = message
    
 
@@ -62,8 +61,7 @@ microgear.setalias("reporter")
 microgear.on_connect = connection
 microgear.on_message = subscription
 microgear.on_disconnect = disconnect
-microgear.subscribe("/nodemcu/lux")
-microgear.subscribe("/nodemcu/temp")
+microgear.subscribe("/nodemcu")
 microgear.subscribe("/uno/amptemp");
 microgear.subscribe("/uno/amphum");
 microgear.subscribe("/uno/wtrtemp");
@@ -73,6 +71,7 @@ microgear.subscribe("/uno/rain");
 microgear.subscribe("/uno/ec");
 microgear.connect(False)
 
+alrain = 1
 while True:
   y,m,d,h,mi,s,wd,wy,isd=time.gmtime()  
   if s % 15 == 0:
@@ -80,15 +79,28 @@ while True:
     r = requests.post(urlThingspeak,params=payload,verify=False)
     print r.text
 
-  if mi == 0 and s == 0:
+  if float(rain) > 40.0 and alrain == 1:
+    v1 = 'Alert Rain!!!!'
+    v2 = 'Time = '+str(d)+'-'+str(m)+'-'+str(y)+' @ '+str(h)+':'+str(mi)
+    v3 = 'Rain  = '+ rain +' %<br>'    
+    payload = {'value1': v1, 'value2': v2, 'value3': v3}
+    r = requests.post(url, data=payload,verify=False)
+    print r.text
+    alrain = 0
+  else :
+    alrain = 1
+  
+  if s % 59 == 0:
+#  if mi == 0 and s == 0:
     print "@%s send to line" % mi
     v1 = 'PUDZA Report'
     v2 = 'Time = '+str(d)+'-'+str(m)+'-'+str(y)+' @ '+str(h)+':'+str(mi)
     v3 = 'EC = '+ ec + ' mS/cm<br>'
     v3+= 'Flow = '+ flow +' L/min<br>'
-    v3+= 'Air Temp = '+ amptemp +' C<br>'
     v3+= 'Humidity = '+ amphum  +' %<br>'
+    v3+= 'Air Temp = '+ amptemp +' C<br>'
     v3+= 'WTR Temp = '+ wtrtemp +' C<br>'
+    v3+= 'Gutter Temp = '+ temp +' C<br>'
     v3+= 'Light = '   + lux +' lux<br>'
     v3+= 'Rain  = '+ rain +' %<br>'
 

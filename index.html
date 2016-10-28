@@ -129,7 +129,7 @@
                                 <div id="collapseOne1" class="panel-collapse collapse in">
                                   <div class="panel-body">
                                       <div class="media accordion-inner">
-                                        <img src="images/camera.jpg" height="200" width="420" alt="">
+                                        <img class="img-thumbnail" src="http://192.168.1.79:8080/?action=stream" />
                                       </div>
                                   </div>
                                 </div>
@@ -149,29 +149,47 @@
                                     </a>
                                   </h3>
                                 </div>
+
                                 <div id="collapseOne3" class="panel-collapse collapse in">
                                   <div class="panel-body">
                                       <div class="media accordion-inner">
 
-                                                
-                                                <div class="form-group">
-                                                    <div class="row"> 
-                                                        <div class="col-sm-8">
-                                                            <input type="text" class="form-control" id="ec_cal">
-                                                        </div>
-                                                        <div class="col-sm-4">                                                    
-                                                            <button type="submit" class="btn btn-primary btn-lg" id="cb">Start</button>
-                                                        </div>
-                                                    </div>
+                                            <label class="col-sm-4 control-label">EC Calibration</label>
+                                            <div class="input-group">
+                                              <input type="text" class="form-control  col-sm-6" id="ec_cal">
+                                              <div class="input-group-addon">mS/cm</div>
+                                            </div>
+                                            <div class="col-sm-offset-4">
+                                                <button type="submit" class="btn btn-primary" id="cb">Start</button> 
+                                            </div>
+
+                                            <hr>
+
+                                            <label class="col-sm-4 control-label">Mist Temp SP</label>
+                                            <div class="input-group">
+                                              <input type="text" class="form-control  col-sm-6" id="sp_temp">
+                                              <div class="input-group-addon">C</div>
+                                            </div>
+                                            <input type="button" class="btn btn-primary col-sm-offset-4" id="csp_temp" value="SET">
+                                            
+                                            <hr>
+
+                                            <div class="col-sm-offset-4">
+                                                <label class="control-label">Manual Mist Pump</label>
+                                                <div class="">
+                                                    <input type="button" class="btn btn-primary" id="csp_temp" value="ON"> 
+                                                    <input type="button" class="btn btn-primary" id="csp_temp" value="OFF"> 
                                                 </div>
+                                            </div>
+
 
                                       </div>
-                                  </div>
+                                    </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
-
 
                 </div> 
             </div><!--/.row-->
