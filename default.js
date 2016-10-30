@@ -160,7 +160,7 @@
         var i = now.getMinutes();
         var s = now.getSeconds();
         var datetime = d + "/" + m + "/" + y + " " + h + ":" + i + ":" + s;
-       document.getElementById("data").innerHTML = '&nbsp;<i class="fa fa-bell-o"></i> '+ datetime + " [" +topic+'] <i class="fa fa-terminal"></i> ' + msg;
+       document.getElementById("data").innerHTML = '&nbsp;<i class="fa fa-bell-o"></i> '+ datetime + ' # ' +topic+' <i class="fa fa-ellipsis-h"></i> ' + msg;
     }
 
 
@@ -200,6 +200,8 @@
 
     microgear.on('connected', function() {
         printMsg('Init',"Connected to NETPIE...");
+        $("#s_htmlgear").removeClass("btn-default");
+        $("#s_htmlgear").addClass("btn-warning");
         microgear.setAlias(ALIAS);
         microgear.subscribe("/eccal");
         microgear.subscribe("/uno/amptemp");
@@ -215,11 +217,23 @@
 
     microgear.on('present', function(event) {
         printMsg(event.alias,event.type);
+        if (event.alias == "reporter") {
+            if (event.type == "aliased") {
+                $("#s_reporter").removeClass("btn-default");
+                $("#s_reporter").addClass("btn-warning");
+            }
+        }
         console.log(event);
     });
 
     microgear.on('absent', function(event) {
         printMsg(event.alias,event.type);
+        if (event.alias == "reporter") {
+            if (event.type == "offline") {
+                $("#s_reporter").removeClass("btn-warning");
+                $("#s_reporter").addClass("btn-default");
+            }
+        }
         console.log(event);
     });
 

@@ -28,50 +28,27 @@
 <body class="homepage">
 
     <header id="header">
+         <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <h2 class="top-number pull-left"><h1><i class="top-number fa fa-signal"></i> PUDZA</h1> Hydroponics Control and Information System</h2>
+ 
+            </div><!--/.container-->
+        </nav><!--/nav-->
+
         <div class="top-bar">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 col-xs-4">
-                        <div class="top-number"><p><i class="fa fa-phone-square"></i>+61255</p></div>
-                    </div>
-                    <div class="col-sm-6 col-xs-8">
-                       <div class="social">
-                            <ul class="social-share">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            </ul>
-                            <div class="search">
-                                <form role="form">
-                                    <input type="text" class="search-form" autocomplete="off" placeholder="Search">
-                                    <i class="fa fa-search"></i>
-                                </form>
-                           </div>
-                       </div>
+                    <div class="col-sm-12 col-xs-12">
+                        <div class="top-number"><p class="" id="data"></p> </div>
                     </div>
                 </div>
             </div><!--/.container-->
         </div><!--/.top-bar-->
-         <nav class="navbar navbar-inverse" role="banner">
-            <div class="container">
-                <h2 class="top-number pull-left"><i class="top-number fa fa-signal"></i> PUDZA - Hydroponics Automation</h2>
 
 
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Configuration</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="contact-us.html">Contact</a></li>                        
-                    </ul>
-                </div>
 
-
-            </div><!--/.container-->
-        </nav><!--/nav-->
     </header><!--/header-->
 
-    <sction>
-        <div class="" id="data"></div>        
-    </sction>
 
     <section id="middle">
         <div class="container">
@@ -133,8 +110,12 @@
                         </div>
                     </div>
 
-<br>
+
+
+                    <br>
+                    
                     <div class="accordion">
+                        
                         <div class="panel-group" id="accordion1">
                             <div class="panel panel-default">                            
                                 <div class="panel-heading active">
@@ -173,8 +154,8 @@
                                             <div class="col-sm-offset-4">
                                                 <label class="control-label">Manual Mist Pump</label>
                                                 <div class="">
-                                                    <input type="button" class="btn btn-primary" id="csp_temp" value="ON"> 
-                                                    <input type="button" class="btn btn-primary" id="csp_temp" value="OFF"> 
+                                                    <input type="button" class="btn btn-primary" value="ON" id="miston"> 
+                                                    <input type="button" class="btn btn-primary" value="OFF" id="mistoff"> 
                                                 </div>
                                             </div>
 
@@ -186,6 +167,18 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <div class="widget tags">
+                        <h3>Things Status</h3>
+                        <ul class="tag-cloud">
+                            <li><input type="button" class="btn btn-default" href="#" value="Arduino" id="s_arduino"></li>
+                            <li><input type="button" class="btn btn-default" href="#" value="NodeMCU" id="s_nodemcu"></li>
+                            <li><input type="button" class="btn btn-default" href="#" value="Reporter" id="s_reporter"></li>
+                            <li><input type="button" class="btn btn-default" href="#" value="Htmlgear" id="s_htmlgear"></li>
+                        </ul>
+                    </div><!--/.tags-->
+
 
                 </div> 
             </div><!--/.row-->
@@ -206,6 +199,7 @@
                                 </a>
                               </h3>
                             </div>
+
                             <div id="collapseOne2" class="panel-collapse collapse in">
                               <div class="panel-body">
                                   <div class="media accordion-inner">                                        
@@ -232,9 +226,13 @@
 
             </div>
 
-    </section>
+    
         
     </section>
+    
+    <section id="bottom">
+    </section><!--/#bottom-->
+    
     <footer id="footer" class="midnight-blue">
         <div class="container">
             <div class="row">
@@ -245,7 +243,7 @@
                     <ul class="pull-right">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About Us</a></li>
-                        <li><a href="#">Faq</a></li>
+                        <li><a href="#">Configuration</a></li>
                         <li><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
