@@ -93,19 +93,6 @@
         titlePosition: "below"        
       });
 
-    var g_avgtemp = new JustGage({
-        id: "gaugeAvgTemp",
-        value: 0,
-        value:0,
-        min: 0,
-        max: 100,
-        relativeGaugeSize: true,
-        decimals:true,
-        gaugeWidthScale: 1,
-        title: "Average Temperature",
-        label:"DegC",
-        titlePosition: "below"        
-      });
 
     var g_hum = new JustGage({
         id: "gaugeHum",
@@ -221,9 +208,6 @@
             else {
                 $('#mist_status').text('OFF');
             }
-        }
-        else if (topic == "/PUDZAHydro/nodemcu/avgtemp") {
-            g_avgtemp.refresh(msg);
         }
         else if (topic == "/PUDZAHydro/eccalmsg") {
             $('#echo_eccal').text(msg);
