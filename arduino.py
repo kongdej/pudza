@@ -10,7 +10,7 @@ appid = "PUDZAHydro"
 gearkey = "jfxG7CIePOKYqdD"
 gearsecret =  "EnmiUKPKkZzwB5wUYab4s87t8"
 
-microgear.create(gearkey,gearsecret,appid,{'debugmode': True})
+microgear.create(gearkey,gearsecret,appid,{'debugmode': False})
 
 def connection():
   print "Now I am connected with netpie"
@@ -39,7 +39,8 @@ microgear.subscribe("/uno/ec");
 microgear.connect(False)
 while True:
   msg =  ser.readline()
-  print msg
+#  print msg
+
 #  microgear.chat("htmlgear",msg)
   datalist = msg.split(',')
   if len(datalist) == 7:
