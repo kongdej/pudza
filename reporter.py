@@ -37,7 +37,7 @@ def subscription(topic,message):
   print topic+" "+message
 
   if topic == "/PUDZAHydro/nodemcu" :
-    lux,temp = message.split(",");
+    lux,temp,mistStatus = message.split(",");
   if topic == "/PUDZAHydro/uno/amptemp" :
     amptemp = message
   if topic == "/PUDZAHydro/uno/amphum" :
@@ -98,8 +98,8 @@ while True:
     print r.text
     alrain = 1
   
-  if s % 59 == 0:
-#  if mi == 0 and s == 0:
+#  if s % 59 == 0:
+  if mi == 0 and s == 0:
     print "@%s send to line" % mi
     v1 = 'PUDZA Report'
     v2 = 'Time = '+str(d)+'-'+str(m)+'-'+str(y)+' @ '+str(h)+':'+str(mi)

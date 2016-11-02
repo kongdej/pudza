@@ -18,6 +18,7 @@ Connection:
 #include <SHA1.h>
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
+#include <EEPROM.h>
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
@@ -44,7 +45,7 @@ MicroGear microgear(client);
 
 BH1750 lightMeter;
 
-float temp=0;
+float temp=0,atemp=0,wtemp=0, avgtemp=0;
 
 int relayPin[4] = {14,12,13,15};
 
@@ -52,18 +53,21 @@ unsigned long previousMillis = 0;     // will store last time LED was updated
 const long interval = 2000;           // interval at which to blink (milliseconds)
 
 void onMsghandler(char *topic, uint8_t* msg, unsigned int msglen) {
-/*
-  Serial.print("Incoming message --> ");
-  Serial.print(topic);
-  Serial.print(" : ");
+//  Serial.print("Incoming message --> ");
+//  Serial.print(topic);
+//  Serial.print(" : ");
 
+/*
   char strState[msglen];
   for (int i = 0; i < msglen; i++) {
     strState[i] = (char)msg[i];
-    Serial.print((char)msg[i]);
+//    Serial.print((char)msg[i]);
   }
-  Serial.println();
+//  Serial.println();
+
   String stateStr = String(strState).substring(0,msglen);
+  
+ *   
  if (String(topic) == "/PUDZAHydro/uno/amptemp") {
     atemp = stateStr.toFloat();
   }
@@ -90,11 +94,9 @@ void onConnected(char *attribute, uint8_t* msg, unsigned int msglen) {
   microgear.setAlias(ALIAS);
   microgear.subscribe("/nodemcu");
   microgear.subscribe("/mist");
-  microgear.subscribe("/mistsp");
 //  microgear.subscribe("/uno/amptemp");
 //  microgear.subscribe("/uno/wtrtemp");  
 }
-
 
 void setup(){
   Serial.begin(9600);
@@ -124,21 +126,53 @@ void setup(){
 }
 
 void loop() {
+  int timer = 0;
+  
   if (microgear.connected()) {
     microgear.loop();                                                                                                                                                               
     uint16_t lux = lightMeter.readLightLevel();
     sensors.requestTemperatures();
     temp = sensors.getTempCByIndex(0); 
-    int relayStatus = digitalRead(relayPin[0]);
-    
-    String msg = String(lux) + ',' + String(temp) + ',' + String(relayStatus);
+    String msg = String(lux) + ',' + String(temp);
     
     unsigned long currentMillis = millis();
     if (currentMillis - previousMillis >= interval) {
        previousMillis = currentMillis;
        microgear.publish ("/nodemcu", msg);
-    }    
-  }else {
+    }
+/*
+
+    avgtemp = 0;
+    int cnttemp = 0;
+    if (temp > 0) {
+       avgtemp += temp;
+       cnttemp++;
+    }
+    if (atemp > 0) {
+       avgtemp += atemp;
+       cnttemp++;
+    }
+    if (wtemp > 0) {
+       avgtemp += wtemp;
+       cnttemp++;
+    }
+    
+    avgtemp = avgtemp/cnttemp;
+
+//    delay(2000);
+//    microgear.publish ("/nodemcu/avgtemp", String(avgtemp));
+    
+    // unsigned long currentMillis = millis();
+    // if (currentMillis - previousMillis >= interval) {
+    //   previousMillis = currentMillis;
+//      if (avgtemp > 26) {
+//        digitalWrite(relayPin[0],HIGH);
+//        delay(10000);
+//        digitalWrite(relayPin[0],LOW);
+      }  
+    // }
+*/    
+  } else {
     Serial.println("connection lost, reconnect...");
     microgear.connect(APPID);
     delay(3000);

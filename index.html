@@ -62,6 +62,7 @@
                             <div id="gaugeEC"></div>   
                             <div id="gaugeLight"></div>   
                             <div id="gaugeABTemp"></div>   
+                            <div id="gaugeAvgTemp"></div>   
                         </div>
                         <div class="col-sm-6">
                             <div id="gaugeFlow"></div>   
@@ -132,31 +133,32 @@
                                       <div class="media accordion-inner">
 
                                             <label class="col-sm-4 control-label">EC Calibration</label>
-                                            <div class="input-group">
+                                            <div class="input-group col-sm-4">
                                               <input type="text" class="form-control  col-sm-6" id="ec_cal">
                                               <div class="input-group-addon">mS/cm</div>
                                             </div>
                                             <div class="col-sm-offset-4">
                                                 <button type="submit" class="btn btn-primary" id="cb">Start</button> 
                                             </div>
+                                            <div class="col-sm-offset-4" id="echo_eccal"></div>
 
                                             <hr>
 
-                                            <label class="col-sm-4 control-label">Mist Temp SP</label>
-                                            <div class="input-group">
-                                              <input type="text" class="form-control  col-sm-6" id="sp_temp">
+                                            <label class="col-sm-4 control-label">Temp. SP</label>
+                                            <div class="input-group col-sm-3">
+                                              <input type="text" class="form-control" id="sp_temp">
                                               <div class="input-group-addon">C</div>
                                             </div>
                                             <input type="button" class="btn btn-primary col-sm-offset-4" id="csp_temp" value="SET">
                                             
                                             <hr>
-
-                                            <div class="col-sm-offset-4">
-                                                <label class="control-label">Manual Mist Pump</label>
-                                                <div class="">
-                                                    <input type="button" class="btn btn-primary" value="ON" id="miston"> 
-                                                    <input type="button" class="btn btn-primary" value="OFF" id="mistoff"> 
-                                                </div>
+                                            <div class="row">    
+                                                <label class="col-sm-4 control-label">Sprayer Pump</label>
+                                                <div class="col-sm-8" id="mist_status">OFF</div>
+                                                <div class="col-sm-12 text-center">                                            
+                                                        <input type="button" class="btn btn-primary" value="ON" id="miston"> 
+                                                        <input type="button" class="btn btn-primary" value="OFF" id="mistoff"> 
+                                                </div>                                               
                                             </div>
 
 
@@ -230,8 +232,7 @@
         
     </section>
     
-    <section id="bottom">
-    </section><!--/#bottom-->
+
     
     <footer id="footer" class="midnight-blue">
         <div class="container">
@@ -256,7 +257,7 @@
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/wow.min.js"></script>
+    <!--script src="js/wow.min.js"></script-->
     <script src="js/raphael-2.1.4.min.js"></script>
     <script src="js/justgage.js"></script>
     <script src="js/microgear.js"></script>

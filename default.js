@@ -12,7 +12,7 @@
         relativeGaugeSize: true,
         gaugeWidthScale: 1,
         decimals:2,
-        title: "Fertilizer EC",
+        title: "Nutrient EC",
         label:"mS/cm",
         titlePosition: "below",
         titleFontSize: "5px",
@@ -88,7 +88,21 @@
         relativeGaugeSize: true,
         decimals:true,
         gaugeWidthScale: 1,
-        title: "Fertilizer Temperature",
+        title: "Nutrient Temperature",
+        label:"DegC",
+        titlePosition: "below"        
+      });
+
+    var g_avgtemp = new JustGage({
+        id: "gaugeAvgTemp",
+        value: 0,
+        value:0,
+        min: 0,
+        max: 100,
+        relativeGaugeSize: true,
+        decimals:true,
+        gaugeWidthScale: 1,
+        title: "Average Temperature",
         label:"DegC",
         titlePosition: "below"        
       });
@@ -167,6 +181,15 @@
     microgear.on('message',function(topic,msg) {
         printMsg(topic,msg);
 
+        if (topic.indexOf('nodemcu') != -1) {
+            $("#s_nodemcu").removeClass("btn-default");
+            $("#s_nodemcu").addClass("btn-warning");
+        }
+        if (topic.indexOf('uno') != -1) {
+            $("#s_arduino").removeClass("btn-default");
+            $("#s_arduino").addClass("btn-warning");
+        }
+
         if (topic == "/PUDZAHydro/uno/amptemp") {
             g_atemp.refresh(msg);
         }
@@ -192,6 +215,18 @@
             var vals = msg.split(",");
             g_light.refresh(vals[0]);
             g_gtemp.refresh(vals[1]);
+            if (vals[2] == '1') {
+                $('#mist_status').text('ON');
+            }
+            else {
+                $('#mist_status').text('OFF');
+            }
+        }
+        else if (topic == "/PUDZAHydro/nodemcu/avgtemp") {
+            g_avgtemp.refresh(msg);
+        }
+        else if (topic == "/PUDZAHydro/eccalmsg") {
+            $('#echo_eccal').text(msg);
         }
         else {
 //            document.getElementById("data").innerHTML = now.getDay() + ":[" + topic+ "] " + msg;
@@ -203,7 +238,6 @@
         $("#s_htmlgear").removeClass("btn-default");
         $("#s_htmlgear").addClass("btn-warning");
         microgear.setAlias(ALIAS);
-        microgear.subscribe("/eccal");
         microgear.subscribe("/uno/amptemp");
         microgear.subscribe("/uno/amphum");
         microgear.subscribe("/uno/wtrtemp");
@@ -212,7 +246,11 @@
         microgear.subscribe("/uno/rain");
         microgear.subscribe("/uno/ec");
         microgear.subscribe("/nodemcu");
+        microgear.subscribe("/eccal");
+        microgear.subscribe("/eccalmsg");
         microgear.subscribe("/mist");
+        microgear.subscribe("/sptemp");
+        microgear.subscribe("/nodemcu/avgtemp");
     });
 
     microgear.on('present', function(event) {
@@ -234,6 +272,19 @@
                 $("#s_reporter").addClass("btn-default");
             }
         }
+        if (event.alias == "raspiPython") {
+            if (event.type == "offline") {
+                $("#s_arduino").removeClass("btn-warning");
+                $("#s_arduino").addClass("btn-default");
+            }
+        }
+        if (event.alias == "nodemcu") {
+            if (event.type == "offline") {
+                $("#s_nodemcu").removeClass("btn-warning");
+                $("#s_nodemcu").addClass("btn-default");
+            }
+        }
+
         console.log(event);
     });
 
@@ -246,12 +297,17 @@
         microgear.publish ("/eccal", $('#ec_cal').val());
     });
 
+    $("#csp_temp").click(function () {
+        console.log($('#sp_temp').val());
+        microgear.publish ("/sptemp", $('#sp_temp').val());
+    });
+
     $("#miston").click(function () {
         console.log("on");
-        microgear.publish ("/mist", "ON");
+        microgear.publish ("/mist", "1");
     });
 
     $("#mistoff").click(function () {
         console.log("off");
-        microgear.publish ("/mist", "OFF");
+        microgear.publish ("/mist", "0");
     });

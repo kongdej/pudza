@@ -28,6 +28,7 @@ microgear.on_connect = connection
 microgear.on_message = subscription
 microgear.on_disconnect = disconnect
 microgear.subscribe("/eccal");
+microgear.subscribe("/eccalmsg");
 microgear.subscribe("/uno/amptemp");
 microgear.subscribe("/uno/amphum");
 microgear.subscribe("/uno/wtrtemp");
@@ -39,7 +40,7 @@ microgear.connect(False)
 while True:
   msg =  ser.readline()
   print msg
-  microgear.chat("htmlgear",msg)
+#  microgear.chat("htmlgear",msg)
   datalist = msg.split(',')
   if len(datalist) == 7:
     microgear.publish("/uno/amptemp",datalist[0])
@@ -49,4 +50,9 @@ while True:
     microgear.publish("/uno/rain",datalist[4])
     microgear.publish("/uno/flow",datalist[5])
     microgear.publish("/uno/ec",datalist[6])
+  elif len(datalist) == 0:
+    microgear.publish("/uno/eccalmsg",msg)
+
+
+
   time.sleep(2)  
