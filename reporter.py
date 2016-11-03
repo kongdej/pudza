@@ -3,12 +3,12 @@ import time
 import requests
 
 appid = "PUDZAHydro"
-gearkey = "vG29a6eadW4O7RY"
-gearsecret =  "EIQAyK2ti42tS3iMfQicqZx8n"
+gearkey = "1N8TA8K6Nf1C63H"
+gearsecret =  "4LrQ3MZQKCDEv2GnEbACZE72o"
 
 # IFTTT
 event = "pudza_report"
-url = "https://maker.ifttt.com/trigger/%s/with/key/dJaghatn9VW74F57cTVwdj" % event
+url = "https://maker.ifttt.com/trigger/%s/with/key/dsFC-2tGEmWDjeXYVEx5m6" % event
 
 # Thingspeak
 urlThingspeak = "https://api.thingspeak.com/update.json"
@@ -69,6 +69,7 @@ microgear.subscribe("/uno/flow");
 microgear.subscribe("/uno/soilhum");
 microgear.subscribe("/uno/rain");
 microgear.subscribe("/uno/ec");
+microgear.subscribe("/reporter");
 microgear.connect(False)
 
 alrain = 1
@@ -76,8 +77,10 @@ while True:
   y,m,d,h,mi,s,wd,wy,isd = time.localtime() 
 
   if s % 15 == 0:
+    microgear.publish("/reporter",'O')
     payload = {'api_key': api_key, 'field1' : amptemp,'field2' : amphum,'field3' : str(wtrtemp),'field4' : str(soilhum),'field5' : str(rain),'field6' : str(flow),'field7' : str(ec),'field8' : str(lux)}
     r = requests.post(urlThingspeak,params=payload,verify=False)
+
 #    print r.text
 
   if float(rain) > 40.0 and alrain == 1:
@@ -115,4 +118,4 @@ while True:
     payload = {'value1': v1, 'value2': v2, 'value3': v3}
     r = requests.post(url, data=payload,verify=False)
 #    print r.text
-   
+  time.sleep(1)

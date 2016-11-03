@@ -51,8 +51,9 @@ while True:
     microgear.publish("/uno/rain",datalist[4])
     microgear.publish("/uno/flow",datalist[5])
     microgear.publish("/uno/ec",datalist[6])
-  elif len(datalist) == 0:
-    microgear.publish("/uno/eccalmsg",msg)
+  elif msg.find(',') == -1:
+    print msg
+    microgear.publish("/eccalmsg",msg)
 
 
 

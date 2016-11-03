@@ -178,7 +178,10 @@
             $("#s_arduino").removeClass("btn-default");
             $("#s_arduino").addClass("btn-warning");
         }
-
+        if (topic == "/PUDZAHydro/reporter") {
+            $("#s_reporter").removeClass("btn-default");
+            $("#s_reporter").addClass("btn-warning");
+        }
         if (topic == "/PUDZAHydro/uno/amptemp") {
             g_atemp.refresh(msg);
         }
@@ -236,7 +239,7 @@
         microgear.subscribe("/eccalmsg");
         microgear.subscribe("/mist");
         microgear.subscribe("/sptemp");
-        microgear.subscribe("/nodemcu/avgtemp");
+        microgear.subscribe("/reporter");
     });
 
     microgear.on('present', function(event) {
