@@ -73,7 +73,7 @@
         relativeGaugeSize: true,
         gaugeWidthScale: .8,
         decimals:true,
-        title: "Gutter Temperaure",
+        title: "Tray Temperature",
         label:"DegC",
         titlePosition: "below"
 
