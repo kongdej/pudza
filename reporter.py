@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import microgear.client as microgear
 import time
 import requests
@@ -23,6 +25,7 @@ soilhum="0"
 rain="0"
 flow="0"
 ec="0"
+mistStatus="0"
 
 microgear.create(gearkey,gearsecret,appid,{'debugmode': False})
 
@@ -32,7 +35,7 @@ def connection():
   r = requests.post(url, data=payload,verify=False)
 
 def subscription(topic,message):
-  global amptemp,amphum,wtrtemp,soilhum,rain,flow,ec,lux,temp
+  global amptemp,amphum,wtrtemp,soilhum,rain,flow,ec,lux,temp,mistStatus
 
 #  print topic+" "+message
 
@@ -52,7 +55,9 @@ def subscription(topic,message):
     flow = message
   if topic == "/PUDZAHydro/uno/ec" :
     ec = message
-   
+  if topic == "/PUDZAHydro/sptemp" :
+    with open("sptemp.txt", "w") as f:
+      f.write(message) 
 
 def disconnect():
   print "disconnect is work"
@@ -70,9 +75,11 @@ microgear.subscribe("/uno/soilhum");
 microgear.subscribe("/uno/rain");
 microgear.subscribe("/uno/ec");
 microgear.subscribe("/reporter");
+microgear.subscribe("/sptemp");
 microgear.connect(False)
 
 alrain = 1
+almistSta = 1
 while True:
   y,m,d,h,mi,s,wd,wy,isd = time.localtime() 
 
@@ -101,6 +108,41 @@ while True:
 #    print r.text
     alrain = 1
   
+  if mistStatus == '1' and almistSta == 1:
+    v1 = 'Mist Pump Start'
+    v2 = 'Time = '+str(d)+'-'+str(m)+'-'+str(y)+' @ '+str(h)+':'+str(mi)
+    v3 = 'Status  = '+ mistStatus +'<br>'    
+    payload = {'value1': v1, 'value2': v2, 'value3': v3}
+    r = requests.post(url, data=payload,verify=False)
+    almistSta = 0
+
+  if mistStatus == '0' and almistSta == 0:
+    v1 = 'Mist Pump Start'
+    v2 = 'Time = '+str(d)+'-'+str(m)+'-'+str(y)+' @ '+str(h)+':'+str(mi)
+    v3 = 'Status  = '+ mistStatus +'<br>'    
+    payload = {'value1': v1, 'value2': v2, 'value3': v3}
+    r = requests.post(url, data=payload,verify=False)
+    almistSta = 1
+
+  if float(amptemp) > 0  and float(wtrtemp) > 0 and float(temp) > 0 :
+    avgtemp =  (float(amptemp) + float(wtrtemp) + float(temp)) / 3.0
+    
+    with open("sptemp.txt", "r") as f:
+      sptemp = f.read() 
+    
+#    print "%f-%f" %(avgtemp,float(sptemp))
+
+    if avgtemp >= float(sptemp) and mistStatus == "0":
+      microgear.publish("/mist","1")
+    elif avgtemp < float(sptemp) and mistStatus == "1":
+      microgear.publish("/mist","0")
+
+
+
+  
+    
+
+
 #  if s % 59 == 0:
   if mi == 0 and s == 0:
 #    print "@%s send to line" % mi

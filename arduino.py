@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import microgear.client as microgear
 import time
 import serial
@@ -15,10 +17,15 @@ microgear.create(gearkey,gearsecret,appid,{'debugmode': False})
 def connection():
   print "Now I am connected with netpie"
 
+amptemp=0
+wtrtemp=0
+
 def subscription(topic,message):
+  global avgtemp
 #  print topic+"="+message
   if topic == "/PUDZAHydro/eccal" :
     ser.write("1"+message)  
+  
 
 def disconnect():
   print "disconnect is work"
