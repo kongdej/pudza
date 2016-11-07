@@ -59,6 +59,7 @@ microgear.on('message',function(topic,msg) {
         console.log(parseFloat(vals[0]));
         if (parseFloat(vals[0]) > 0) {
             $("#hmi_light").attr("src","svg/pumpon.svg");
+            console.log('on');
         }
 
         if (vals[2]=='1') {
