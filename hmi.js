@@ -42,7 +42,14 @@ microgear.on('message',function(topic,msg) {
         $('#hmi_msoil').text(msg+' %');        
     }
     else if (topic == "/PUDZAHydro/uno/rain") {
-        $('#hmi_rain').text(msg+' %');        
+        if (parseFloat(msg) >= 15) {
+            $("#hmi_rainimg").attr("src","svg/rain.png");            
+            $('#hmi_rain').text(msg+' %');        
+        }
+        else {
+            $("#hmi_rainimg").attr("src","");                        
+            $('#hmi_rain').text(' ');        
+        }
     }
     else if (topic == "/PUDZAHydro/uno/flow") {
         $('#hmi_flow').text(msg+' l/m');        
@@ -52,15 +59,25 @@ microgear.on('message',function(topic,msg) {
     }
     else if (topic == "/PUDZAHydro/nodemcu") {
         var vals = msg.split(",");
-        console.log(vals[2]);
+//        console.log(vals[2]);
         $('#hmi_lux').text(vals[0]+' lux');
         $('#hmi_traytemp').text(vals[1]+" C");
         
-        console.log(parseFloat(vals[0]));
-        if (parseFloat(vals[0]) > 0) {
-            $("#hmi_light").attr("src","svg/pumpon.svg");
-            console.log('on');
+        light = parseFloat(vals[0]);
+        //light = 56000;
+        if (light  < 1) {
+            $("#hmi_light").attr("src","svg/light1.png");
         }
+        else if (light < 5000) {
+            $("#hmi_light").attr("src","svg/light2.png");            
+        }
+        else if (light < 30000) {
+            $("#hmi_light").attr("src","svg/light3.png");            
+        }
+        else if (light >= 30000) {
+            $("#hmi_light").attr("src","svg/light4.png");            
+        }
+
 
         if (vals[2]=='1') {
             $("#hmi_pump").attr("src","svg/pumpon.svg");
@@ -137,3 +154,6 @@ microgear.resettoken(function(err) {
     microgear.connect(APPID);
 });
 
+$("#hmi_pump").click(function () {
+    console.log("click pump");
+});
