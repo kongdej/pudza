@@ -1,3 +1,11 @@
+.value {
+	color:#ffffff;
+	background-color: #777777;
+	padding: 2px;
+	margin:2px;
+	width:80px;
+}
+
 @media only screen and (max-width: 1366px) {
 	.weather {
 		position: absolute;
@@ -9,6 +17,12 @@
 		top: 365px;
 		left:940px;
 	}
+	.light {
+		position: absolute;
+		top: 70px; 
+		left:310px;
+	}
+
 }
 
 @media only screen 
@@ -23,8 +37,9 @@ and (orientation : portrait) { /* STYLES GO HERE */
 	.pump {
 		position: absolute;
 		top: 365px;
-		left:677px;
+		left:676px;
 	}
+
 }
 
 @media only screen 
