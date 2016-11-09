@@ -22,12 +22,12 @@ function printMsg(topic,msg) {
     var i = now.getMinutes();
     var s = now.getSeconds();
     var datetime = d + "/" + m + "/" + y + " " + h + ":" + i + ":" + s;
-//   document.getElementById("data").innerHTML = '&nbsp;<i class="fa fa-bell-o"></i> '+ datetime + ' # ' +topic+' <i class="fa fa-ellipsis-h"></i> ' + msg;
+    document.getElementById("data").innerHTML = '&nbsp;<i class="fa fa-bell-o"></i> '+ datetime + ' # ' +topic+' <i class="fa fa-ellipsis-h"></i> ' + msg;
 }
 
 
 microgear.on('message',function(topic,msg) {
-//    printMsg(topic,msg);
+    printMsg(topic,msg);
 
     if (topic == "/PUDZAHydro/uno/amptemp") {
         $('#hmi_atemp').text(msg+' C');        
@@ -154,6 +154,13 @@ microgear.resettoken(function(err) {
     microgear.connect(APPID);
 });
 
-$("#hmi_pump").click(function () {
-    console.log("click pump");
+$(function () {
+
+    $("#hmi_pump").click(function () {
+        $(this).w2overlay($('#popup1 [rel=body]').html(), { css: { width: '600px', padding: '10px' } });
+        console.log("pump");
+    });
+
+
+
 });
