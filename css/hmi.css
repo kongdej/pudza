@@ -105,7 +105,7 @@ and (orientation : portrait) { /* STYLES GO HERE */
 		padding: 2px;
 		width: 60px;
 		top: 520px;
-		left:100px; 
+		left:90px; 
 	}
 }
 
@@ -158,6 +158,6 @@ and (orientation : landscape) { /* STYLES GO HERE */
 		padding: 2px;
 		width: 60px;
 		top: 520px;
-		left:180px; 
+		left:190px; 
 	}
 }
