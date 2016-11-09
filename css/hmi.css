@@ -126,7 +126,7 @@ and (orientation : landscape) { /* STYLES GO HERE */
 	.light {
 		position: absolute;
 		top: 70px; 
-		left:100px;
+		left:80px;
 	}
 	.flow {
 		position: absolute;
@@ -158,6 +158,6 @@ and (orientation : landscape) { /* STYLES GO HERE */
 		padding: 2px;
 		width: 60px;
 		top: 520px;
-		left:200px; 
+		left:180px; 
 	}
 }
