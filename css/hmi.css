@@ -40,7 +40,7 @@ and (orientation : portrait) { /* STYLES GO HERE */
 	.weather {
 		position: absolute;
 		top: 200px;
-		left:100px;
+		left:50px;
 	}
 	.pump {
 		position: absolute;
@@ -54,7 +54,7 @@ and (orientation : portrait) { /* STYLES GO HERE */
 		padding: 2px;
 		width:80px;
 		top: 280px;
-		left:220px; 
+		left:100px; 
 	}
 }
 
@@ -79,6 +79,6 @@ and (orientation : landscape) { /* STYLES GO HERE */
 		padding: 2px;
 		width:80px;
 		top: 280px;
-		left:220px; 
+		left:120px; 
 	}
 }
