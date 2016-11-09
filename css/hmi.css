@@ -69,7 +69,7 @@ and (orientation : portrait) { /* STYLES GO HERE */
 	.ec {
 		position: absolute;
 		top: 480px;
-		left:200px;
+		left:400px;
 	}
 }
 
