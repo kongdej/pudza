@@ -13,8 +13,8 @@ and (max-device-width : 1024px)
 and (orientation : portrait) { /* STYLES GO HERE */
 	.weather {
 		position: absolute;
-		top: 50px;
-		left:10px;
+		top: 200px;
+		left:30px;
 	}
 }
 
