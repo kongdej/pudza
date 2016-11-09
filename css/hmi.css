@@ -14,7 +14,7 @@ and (orientation : portrait) { /* STYLES GO HERE */
 	.weather {
 		position: absolute;
 		top: 200px;
-		left:30px;
+		left:100px;
 	}
 }
 
@@ -24,7 +24,7 @@ and (max-device-width : 1024px)
 and (orientation : landscape) { /* STYLES GO HERE */
 	.weather {
 		position: absolute;
-		top: 50px;
-		left:30px;
+		top: 200px;
+		left:100px;
 	}
 }
