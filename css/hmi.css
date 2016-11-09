@@ -6,6 +6,14 @@
 	width:80px;
 }
 
+.value2 {
+	color:#ffffff;
+	background-color: #777777;
+	padding: 2px;
+	margin:2px;
+	width:90px;
+}
+
 @media only screen and (max-width: 1366px) {
 	.weather {
 		position: absolute;
