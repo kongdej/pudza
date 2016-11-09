@@ -1,0 +1,30 @@
+@media only screen and (max-width: 1366px) {
+	.weather {
+		position: absolute;
+		top: 150px;
+		left:330px;
+	}
+
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) { /* STYLES GO HERE */
+	.weather {
+		position: absolute;
+		top: 150px;
+		left:330px;
+	}
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { /* STYLES GO HERE */
+	.weather {
+		position: absolute;
+		top: 150px;
+		left:330px;
+	}
+}
