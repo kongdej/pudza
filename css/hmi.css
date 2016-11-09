@@ -39,6 +39,6 @@ and (orientation : landscape) { /* STYLES GO HERE */
 	.pump {
 		position: absolute;
 		top: 365px;
-		left:700px;
+		left:750px;
 	}
 }
