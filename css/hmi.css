@@ -29,7 +29,7 @@
 		padding: 2px;
 		width:80px;
 		top: 280px;
-		left:400px;" 
+		left:400px; 
 	}
 }
 
@@ -54,7 +54,7 @@ and (orientation : portrait) { /* STYLES GO HERE */
 		padding: 2px;
 		width:80px;
 		top: 280px;
-		left:220px;" 
+		left:220px; 
 	}
 }
 
@@ -71,5 +71,14 @@ and (orientation : landscape) { /* STYLES GO HERE */
 		position: absolute;
 		top: 366px;
 		left:778px;
+	}
+	.flow {
+		position: absolute;
+		color:#ffffff;
+		background-color: #777777;
+		padding: 2px;
+		width:80px;
+		top: 280px;
+		left:220px; 
 	}
 }
