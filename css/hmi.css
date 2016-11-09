@@ -31,6 +31,11 @@
 		top: 280px;
 		left:400px; 
 	}
+	.ec {
+		position: absolute;
+		top: 480px;
+		left:630px;
+	}
 }
 
 @media only screen 
@@ -61,6 +66,11 @@ and (orientation : portrait) { /* STYLES GO HERE */
 		top: 290px;
 		left:120px; 
 	}
+	.ec {
+		position: absolute;
+		top: 480px;
+		left:200px;
+	}
 }
 
 @media only screen 
@@ -90,5 +100,10 @@ and (orientation : landscape) { /* STYLES GO HERE */
 		width:80px;
 		top: 300px;
 		left:240px; 
+	}
+	.ec {
+		position: absolute;
+		top: 480px;
+		left:200px;
 	}
 }
