@@ -42,7 +42,7 @@ microgear.on('message',function(topic,msg) {
         $('#hmi_msoil').text(msg+' %');        
     }
     else if (topic == "/PUDZAHydro/uno/rain") {
-        if (parseFloat(msg) < 15) {
+        if (parseFloat(msg) >= 1) {
             $("#hmi_rainimg").attr("src","svg/rain.png");            
             $('#hmi_rain').text(msg+' %');        
         }
