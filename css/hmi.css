@@ -34,11 +34,11 @@ and (orientation : landscape) { /* STYLES GO HERE */
 	.weather {
 		position: absolute;
 		top: 200px;
-		left:90px;
+		left:80px;
 	}
 	.pump {
 		position: absolute;
-		top: 365px;
-		left:780px;
+		top: 366px;
+		left:778px;
 	}
 }
