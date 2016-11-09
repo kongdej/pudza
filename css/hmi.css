@@ -104,6 +104,6 @@ and (orientation : landscape) { /* STYLES GO HERE */
 	.ec {
 		position: absolute;
 		top: 480px;
-		left:400px;
+		left:450px;
 	}
 }
