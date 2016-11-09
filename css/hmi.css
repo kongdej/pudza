@@ -4,7 +4,11 @@
 		top: 150px;
 		left:330px;
 	}
-
+	.pump {
+		position: absolute;
+		top: 365px;
+		left:940px;
+	}
 }
 
 @media only screen 
@@ -15,6 +19,11 @@ and (orientation : portrait) { /* STYLES GO HERE */
 		position: absolute;
 		top: 200px;
 		left:100px;
+	}
+	.pump {
+		position: absolute;
+		top: 365px;
+		left:240px;
 	}
 }
 
