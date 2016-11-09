@@ -36,6 +36,15 @@
 		top: 480px;
 		left:630px;
 	}
+	.traytemp {
+		position: absolute;
+		color:#ffffff;
+		background-color: #777777;
+		padding: 2px;
+		width: 80px;
+		top: 240px;
+		left:862px;" 
+	}
 }
 
 @media only screen 
@@ -71,6 +80,15 @@ and (orientation : portrait) { /* STYLES GO HERE */
 		top: 480px;
 		left:350px;
 	}
+	.traytemp {
+		position: absolute;
+		color:#ffffff;
+		background-color: #777777;
+		padding: 2px;
+		width: 80px;
+		top: 240px;
+		left:462px;" 
+	}
 }
 
 @media only screen 
@@ -105,5 +123,14 @@ and (orientation : landscape) { /* STYLES GO HERE */
 		position: absolute;
 		top: 480px;
 		left:450px;
+	}
+	.traytemp {
+		position: absolute;
+		color:#ffffff;
+		background-color: #777777;
+		padding: 2px;
+		width: 80px;
+		top: 240px;
+		left:562px;" 
 	}
 }
