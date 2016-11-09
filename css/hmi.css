@@ -22,7 +22,15 @@
 		top: 70px; 
 		left:310px;
 	}
-
+	.flow {
+		position: absolute;
+		color:#ffffff;
+		background-color: #777777;
+		padding: 2px;
+		width:80px;
+		top: 280px;
+		left:400px;" 
+	}
 }
 
 @media only screen 
@@ -39,7 +47,15 @@ and (orientation : portrait) { /* STYLES GO HERE */
 		top: 365px;
 		left:676px;
 	}
-
+	.flow {
+		position: absolute;
+		color:#ffffff;
+		background-color: #777777;
+		padding: 2px;
+		width:80px;
+		top: 280px;
+		left:220px;" 
+	}
 }
 
 @media only screen 
