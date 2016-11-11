@@ -12,7 +12,7 @@
         relativeGaugeSize: true,
         gaugeWidthScale: .8,
         decimals:2,
-        title: "Nutrient EC",
+        title: "ความเข้มข้นปุ๋ย",
         label:"mS/cm",
         titlePosition: "below",
         titleFontSize: "5px",
@@ -28,7 +28,7 @@
         relativeGaugeSize: true,
         gaugeWidthScale: .8,
         decimals:true,
-        title: "Water Flow",
+        title: "อัตราการไหล",
         label:"L/min",
         titlePosition: "below"
       });
@@ -42,7 +42,7 @@
         counter: true,
         formatNumber:true,
         gaugeWidthScale: .8,
-        title: "Ambient Light",
+        title: "แสงแดด",
         label:"Lux",
         titlePosition: "below",
         titleFontSize: "5px",
@@ -59,7 +59,7 @@
         relativeGaugeSize: true,
         decimals:true,
         gaugeWidthScale: .8,
-        title: "Ambient Temperature",
+        title: "อุณหภูมิอากาศ",
         label:"DegC",
         titlePosition: "below"
       });
@@ -73,7 +73,7 @@
         relativeGaugeSize: true,
         gaugeWidthScale: .8,
         decimals:true,
-        title: "Tray Temperature",
+        title: "อุณหภูมิรางปลูก",
         label:"DegC",
         titlePosition: "below"
 
@@ -88,7 +88,7 @@
         relativeGaugeSize: true,
         decimals:true,
         gaugeWidthScale: .8,
-        title: "Nutrient Temperature",
+        title: "อุณหภูมิน้ำปุ๋ย",
         label:"DegC",
         titlePosition: "below"        
       });
@@ -104,7 +104,7 @@
         donut:true,
         gaugeWidthScale: 0.5,
         decimals:true,
-        title: "Ambient Humidity",
+        title: "ความชื้นอากาศ",
         label:"%",
         titlePosition: "below"        
       });
@@ -119,7 +119,7 @@
         donut:true,
         decimals:true,
         gaugeWidthScale: 0.5,
-        title: "Rain",
+        title: "ฝกตก",
         label:"%",
         titlePosition: "below"        
       });
@@ -136,7 +136,7 @@
         gaugeWidthScale: 0.5,
 
         decimals:true,
-        title: "Soil Humidity",
+        title: "ความชื้นดิน",
         label:"%",
         titlePosition: "below"        
       });
@@ -217,6 +217,9 @@
         else if (topic == "/PUDZAHydro/eccalmsg") {
             $('#echo_eccal').text(msg);
         }
+        else if (topic == "/PUDZAHydro/sptempf") {
+            $('#echo_sptemp').text(msg);
+        }
         else {
 //            document.getElementById("data").innerHTML = now.getDay() + ":[" + topic+ "] " + msg;
         }
@@ -239,6 +242,8 @@
         microgear.subscribe("/eccalmsg");
         microgear.subscribe("/mist");
         microgear.subscribe("/sptemp");
+        microgear.subscribe("/sptempf");
+        microgear.subscribe("/tempauto");
         microgear.subscribe("/reporter");
     });
 
@@ -299,4 +304,16 @@
     $("#mistoff").click(function () {
         console.log("off");
         microgear.publish ("/mist", "0");
+    });
+
+
+    $('#button1').jqxSwitchButton({ height: 27, width: 81,  checked: true });
+
+    $('#button1').on('checked', function (event) {
+        microgear.publish ("/tempauto", "0");
+        console.log('auto');
+    });
+    $('#button1').on('unchecked', function (event) {
+        microgear.publish ("/tempauto", "1");
+        console.log('manual');
     });

@@ -59,6 +59,11 @@ def subscription(topic,message):
     with open("sptemp.txt", "w") as f:
       f.write(message) 
 
+  if topic == "/PUDZAHydro/tempauto" :
+    print "get auto"
+    with open("tempauto.txt", "w") as f:
+      f.write(message) 
+
 def disconnect():
   print "disconnect is work"
 
@@ -76,6 +81,9 @@ microgear.subscribe("/uno/rain");
 microgear.subscribe("/uno/ec");
 microgear.subscribe("/reporter");
 microgear.subscribe("/sptemp");
+microgear.subscribe("/sptempf");
+microgear.subscribe("/tempauto");
+
 microgear.connect(False)
 
 alrain = 1
@@ -124,11 +132,18 @@ while True:
     r = requests.post(url, data=payload,verify=False)
     almistSta = 1
 
-  if float(amptemp) > 0  and float(wtrtemp) > 0 and float(temp) > 0 :
-    avgtemp =  (float(amptemp) + float(wtrtemp) + float(temp)) / 3.0
     
-    with open("sptemp.txt", "r") as f:
-      sptemp = f.read() 
+  with open("sptemp.txt", "r") as f:
+    sptemp = f.read() 
+
+  with open("tempauto.txt", "r") as f:
+    tempauto = f.read() 
+
+  microgear.publish("/sptempf",sptemp)
+    
+  if float(amptemp) > 0  and float(wtrtemp) > 0 and float(temp) > 0 and int(tempauto):
+    avgtemp =  (float(amptemp) + float(wtrtemp) + float(temp)) / 3.0
+  
     
 #    print "%f-%f" %(avgtemp,float(sptemp))
 
