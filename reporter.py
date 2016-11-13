@@ -166,11 +166,12 @@ while True:
     v3 = 'EC = '+ ec + ' mS/cm<br>'
     v3+= 'Flow = '+ flow +' L/min<br>'
     v3+= 'Humidity = '+ amphum  +' %<br>'
-    v3+= 'Air Temp = '+ amptemp +' C<br>'
     v3+= 'WTR Temp = '+ wtrtemp +' C<br>'
-    v3+= 'Gutter Temp = '+ temp +' C<br>'
+    v3+= 'Tray Temp = '+ temp +' C<br>'
+    v3+= 'Air Temp = '+ amptemp +' C<br>'
     v3+= 'Light = '   + lux +' lux<br>'
     v3+= 'Rain  = '+ rain +' %<br>'
+    v3+= 'soil  = '+ soilhum +' %<br>'
 
     payload = {'value1': v1, 'value2': v2, 'value3': v3}
     r = requests.post(url, data=payload,verify=False)

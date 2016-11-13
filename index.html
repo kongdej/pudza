@@ -43,17 +43,33 @@
 </head><!--/head-->
 
 <body class="homepage">
-
     <header id="header">
-        <div class="top-bar">
-            <nav class="navbar-inverse">
-                <div class="container">
-                    <h1 class="top-number pull-left"><i class="top-number fa fa-signal"></i> PUDZA DASHBOARD</h1>
-                    <h1 class="top-number pull-right"> <a href="hmi.html" target="_blank">HMI</a></h1>
-                </div><!--/.container-->
-            </nav><!--/nav-->
-        </div>
+        <nav class="navbar navbar-inverse" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <h2 class="top-number pull-left"><i class="top-number fa fa-signal"></i> PUDZA DASHBOARD</h2>
+                </div>
+                
+                <div class="collapse navbar-collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="hmi.html" target="_blank">HMI</a></li>
+                        <li><a href="configuration.html">Configuration</a></li>
+                    </ul>
+                </div>
+            </div><!--/.container-->
+        </nav><!--/nav-->
+        
     </header><!--/header-->
+
+
+
 
 
     <section id="middle">
@@ -92,8 +108,7 @@
                 </div>
                 <div class="col-sm-1"></div>
 
-                <div class="col-sm-5 wow fadeInDown">
-                    
+                <div class="col-sm-5 wow fadeInDown">                    
                     <div class="accordion">
                         <div class="panel-group" id="accordion1">
                             <div class="panel panel-default">                            
@@ -229,7 +244,6 @@
         </div><!--/.container-->
     </section><!--/#middle-->
 
-  
     <section>
             <div class="container">
                 <div class="accordion">
@@ -275,6 +289,7 @@
         
     </section>
     
+  
 
     
     <footer id="footer" class="midnight-blue">
@@ -284,22 +299,26 @@
                     &copy; 2016-2017 <a target="_blank" href="http://shapebootstrap.net/" title="">PUDZA Maker Club</a>. All Rights Reserved.
                 </div>
                 <div class="col-sm-6">
-                           <div class="top-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12 col-xs-12">
-                        <div class="top-number"><p class="" id="data"></p> </div>
-                    </div>
-                </div>
-            </div><!--/.container-->
-        </div><!--/.top-bar-->
-
-
+                    <div class="top-number"><p class="" id="data"></p> </div>        
                 </div>
             </div>
         </div>
     </footer><!--/#footer-->
 
+   <section id="footer">
+       <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <a href="http://www.accuweather.com/en/th/nonthaburi/318832/weather-forecast/318832" class="aw-widget-legal">
+                    <!--
+                    By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.
+                    -->
+                    </a><div id="awtd1479010478221" class="aw-widget-36hour"  data-locationkey="318832" data-unit="c" data-language="en-us" data-useip="false" data-uid="awtd1479010478221" data-editlocation="false"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/jquery.isotope.min.js"></script>
