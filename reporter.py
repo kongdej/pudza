@@ -125,7 +125,7 @@ while True:
     almistSta = 0
 
   if mistStatus == '0' and almistSta == 0:
-    v1 = 'Mist Pump Start'
+    v1 = 'Mist Pump Stop'
     v2 = 'Time = '+str(d)+'-'+str(m)+'-'+str(y)+' @ '+str(h)+':'+str(mi)
     v3 = 'Status  = '+ mistStatus +'<br>'    
     payload = {'value1': v1, 'value2': v2, 'value3': v3}
