@@ -122,6 +122,12 @@ and (orientation : portrait) { /* STYLES GO HERE */
 		top: 520px;
 		left:85px; 
 	}
+	.rain {
+		position: absolute;
+		color:#ff0000;
+		top: 320px;
+		left:50px;
+	}
 }
 
 @media only screen 
@@ -174,5 +180,11 @@ and (orientation : landscape) { /* STYLES GO HERE */
 		width: 60px;
 		top: 520px;
 		left:190px; 
+	}
+	.rain {
+		position: absolute;
+		color:#ff0000;
+		top: 320px;
+		left:100px;
 	}
 }
