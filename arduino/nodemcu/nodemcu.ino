@@ -18,14 +18,7 @@ Connection:
 #include <SHA1.h>
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
-#include <OneWire.h>
-#include <DallasTemperature.h>
-
-#define ONE_WIRE_BUS 0
-
-// parameter for temperture sensor
-OneWire oneWire(ONE_WIRE_BUS);// Setup a oneWire instance to communicate with any OneWire devices
-DallasTemperature sensors(&oneWire);// Pass our oneWire reference to Dallas Temperature.
+#include <EEPROM.h>
 
 const char* ssid     = "BAZ";
 const char* password = "gearman1";
@@ -44,19 +37,12 @@ MicroGear microgear(client);
 
 BH1750 lightMeter;
 
-float temp=0;
-
-int relayPin[4] = {14,12,13,15};
-
-unsigned long previousMillis = 0;     // will store last time LED was updated
-const long interval = 2000;           // interval at which to blink (milliseconds)
+int relayPin[] = {5,6,7,8};
 
 void onMsghandler(char *topic, uint8_t* msg, unsigned int msglen) {
-/*
   Serial.print("Incoming message --> ");
   Serial.print(topic);
   Serial.print(" : ");
-
   char strState[msglen];
   for (int i = 0; i < msglen; i++) {
     strState[i] = (char)msg[i];
@@ -64,42 +50,33 @@ void onMsghandler(char *topic, uint8_t* msg, unsigned int msglen) {
   }
   Serial.println();
   String stateStr = String(strState).substring(0,msglen);
- if (String(topic) == "/PUDZAHydro/uno/amptemp") {
-    atemp = stateStr.toFloat();
-  }
-  if (String(topic) == "/PUDZAHydro/uno/wtrtemp") {
-    wtemp = stateStr.toFloat();    
-  }
-*/
-
-  if (String(topic) == "/PUDZAHydro/mist"){
-    if (msg[0] == '1') {
+  if (topic == "/PUDZAHydro/mist"){
+    if (stateStr == "ON") {
       digitalWrite(relayPin[0],HIGH);
-//      Serial.print("ON");
     }
-    else if (msg[0] == '0') {
+    else if (stateStr == "OFF") {
       digitalWrite(relayPin[0],LOW);
-//      Serial.print("OFF");
     }
-  } 
+  }
 }
 
 void onConnected(char *attribute, uint8_t* msg, unsigned int msglen) {
   Serial.println("Connected to NETPIE...");
   microgear.setName("nodemcu");
   microgear.setAlias(ALIAS);
-  microgear.subscribe("/nodemcu");
+  microgear.subscribe("/nodemcu/lux");
   microgear.subscribe("/mist");
-  microgear.subscribe("/mistsp");
-//  microgear.subscribe("/uno/amptemp");
-//  microgear.subscribe("/uno/wtrtemp");  
 }
-
 
 void setup(){
   Serial.begin(9600);
   lightMeter.begin();
-  sensors.begin();
+
+  for (int i=0;i<4;i++) {
+    pinMode(relayPin[i],OUTPUT);
+    digitalWrite(relayPin[i],HIGH);
+  }
+  
   microgear.on(MESSAGE,onMsghandler);
   microgear.on(CONNECTED,onConnected);
 
@@ -115,32 +92,23 @@ void setup(){
     Serial.println(WiFi.localIP());
 
     //uncomment the line below if you want to reset token -->
-    //microgear.resetToken();
+    microgear.resetToken();
     microgear.init(GEARKEY, GEARSECRET, SCOPE);
     microgear.connect(APPID);
   }
-
-  pinMode(relayPin[0],OUTPUT);
 }
 
 void loop() {
   if (microgear.connected()) {
-    microgear.loop();                                                                                                                                                               
+    microgear.loop();
+    Serial.println("connect...");
     uint16_t lux = lightMeter.readLightLevel();
-    sensors.requestTemperatures();
-    temp = sensors.getTempCByIndex(0); 
-    int relayStatus = digitalRead(relayPin[0]);
-    
-    String msg = String(lux) + ',' + String(temp) + ',' + String(relayStatus);
-    
-    unsigned long currentMillis = millis();
-    if (currentMillis - previousMillis >= interval) {
-       previousMillis = currentMillis;
-       microgear.publish ("/nodemcu", msg);
-    }    
-  }else {
+    Serial.print("Light: ");Serial.print(lux);Serial.println(" lx");  
+//    microgear.chat("htmlgear", String(lux));
+    microgear.publish ("/nodemcu/lux", String(lux));
+  } else {
     Serial.println("connection lost, reconnect...");
     microgear.connect(APPID);
-    delay(3000);
   }
+  delay(1000);
 }

@@ -17,13 +17,10 @@ microgear.create(gearkey,gearsecret,appid,{'debugmode': False})
 def connection():
   print "Now I am connected with netpie"
 
-
 def subscription(topic,message):
-  global avgtemp
 #  print topic+"="+message
   if topic == "/PUDZAHydro/eccal" :
     ser.write("1"+message)  
-  
 
 def disconnect():
   print "disconnect is work"
@@ -42,6 +39,7 @@ microgear.subscribe("/uno/soilhum");
 microgear.subscribe("/uno/rain");
 microgear.subscribe("/uno/ec");
 microgear.connect(False)
+
 while True:
   msg =  ser.readline()
 #  print msg

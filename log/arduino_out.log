@@ -1,0 +1,1161 @@
+16/11/2016 10:15:58 AM DEBUG    Check stored token.
+16/11/2016 10:16:03 AM DEBUG    Connected with result code 0
+16/11/2016 10:16:03 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 10:16:03 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 10:16:03 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 10:16:03 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 10:16:03 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 10:16:03 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 10:16:03 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 10:16:03 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 10:16:03 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 10:16:03 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 10:16:11 AM DEBUG    Diconnected with result code 1
+16/11/2016 10:16:15 AM DEBUG    Connected with result code 0
+16/11/2016 10:16:15 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 10:16:15 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 10:16:15 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 10:16:15 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 10:16:15 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 10:16:15 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 10:16:15 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 10:16:15 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 10:16:15 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 10:16:15 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 10:16:18 AM DEBUG    Diconnected with result code 1
+16/11/2016 10:16:19 AM DEBUG    Connected with result code 0
+16/11/2016 10:16:19 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 10:16:19 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 10:16:19 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 10:16:19 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 10:16:19 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 10:16:19 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 10:16:19 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 10:16:19 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 10:16:19 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 10:16:19 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 10:50:11 AM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 10:50:13 AM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 10:50:15 AM DEBUG    Check stored token.
+16/11/2016 10:50:22 AM DEBUG    Connected with result code 0
+16/11/2016 10:50:22 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 10:50:22 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 10:50:22 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 10:50:22 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 10:50:22 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 10:50:22 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 10:50:22 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 10:50:22 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 10:50:22 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 10:50:22 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 10:56:14 AM DEBUG    Diconnected with result code 1
+16/11/2016 10:56:16 AM DEBUG    Connected with result code 0
+16/11/2016 10:56:16 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 10:56:16 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 10:56:16 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 10:56:16 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 10:56:16 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 10:56:16 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 10:56:16 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 10:56:16 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 10:56:16 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 10:56:16 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 11:02:17 AM DEBUG    Diconnected with result code 1
+16/11/2016 11:02:24 AM DEBUG    Connected with result code 0
+16/11/2016 11:02:24 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 11:02:24 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 11:02:24 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 11:02:24 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 11:02:24 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 11:02:24 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 11:02:24 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 11:02:24 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 11:02:24 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 11:02:24 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 11:24:59 AM DEBUG    Diconnected with result code 1
+16/11/2016 11:25:05 AM DEBUG    Connected with result code 0
+16/11/2016 11:25:05 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 11:25:05 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 11:25:05 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 11:25:05 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 11:25:05 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 11:25:05 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 11:25:05 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 11:25:05 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 11:25:05 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 11:25:05 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 11:31:50 AM DEBUG    Diconnected with result code 1
+16/11/2016 11:31:51 AM DEBUG    Connected with result code 0
+16/11/2016 11:31:51 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 11:31:51 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 11:31:51 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 11:31:51 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 11:31:51 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 11:31:51 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 11:31:51 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 11:31:51 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 11:31:51 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 11:31:51 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 11:33:48 AM DEBUG    Diconnected with result code 1
+16/11/2016 11:33:50 AM DEBUG    Connected with result code 0
+16/11/2016 11:33:50 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 11:33:50 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 11:33:50 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 11:33:50 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 11:33:50 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 11:33:50 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 11:33:50 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 11:33:50 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 11:33:50 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 11:33:50 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 11:41:05 AM DEBUG    Diconnected with result code 1
+16/11/2016 11:41:06 AM DEBUG    Connected with result code 0
+16/11/2016 11:41:07 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 11:41:07 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 11:41:07 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 11:41:07 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 11:41:07 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 11:41:07 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 11:41:07 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 11:41:07 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 11:41:07 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 11:41:07 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 11:41:39 AM DEBUG    Diconnected with result code 1
+16/11/2016 11:41:41 AM DEBUG    Connected with result code 0
+16/11/2016 11:41:41 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 11:41:41 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 11:41:41 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 11:41:41 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 11:41:41 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 11:41:41 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 11:41:41 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 11:41:41 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 11:41:41 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 11:41:41 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 11:42:10 AM DEBUG    Check stored token.
+16/11/2016 11:42:17 AM DEBUG    Connected with result code 0
+16/11/2016 11:42:17 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 11:42:17 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 11:42:17 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 11:42:17 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 11:42:17 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 11:42:17 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 11:42:17 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 11:42:17 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 11:42:17 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 11:42:17 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 11:50:14 AM DEBUG    Check stored token.
+16/11/2016 11:50:21 AM DEBUG    Connected with result code 0
+16/11/2016 11:50:21 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 11:50:21 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 11:50:21 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 11:50:21 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 11:50:21 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 11:50:21 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 11:50:21 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 11:50:21 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 11:50:21 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 11:50:21 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 11:51:00 AM DEBUG    Diconnected with result code 1
+16/11/2016 11:51:04 AM DEBUG    Connected with result code 0
+16/11/2016 11:51:04 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 11:51:04 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 11:51:04 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 11:51:04 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 11:51:04 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 11:51:04 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 11:51:04 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 11:51:04 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 11:51:04 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 11:51:04 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 11:56:06 AM DEBUG    Diconnected with result code 1
+16/11/2016 11:56:07 AM DEBUG    Connected with result code 0
+16/11/2016 11:56:07 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 11:56:07 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 11:56:07 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 11:56:07 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 11:56:07 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 11:56:07 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 11:56:07 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 11:56:07 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 11:56:07 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 11:56:07 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 12:13:52 PM DEBUG    Diconnected with result code 1
+16/11/2016 12:13:53 PM DEBUG    Connected with result code 0
+16/11/2016 12:13:53 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 12:13:53 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 12:13:53 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 12:13:53 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 12:13:53 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 12:13:53 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 12:13:53 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 12:13:53 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 12:13:53 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 12:13:53 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 12:49:29 PM DEBUG    Diconnected with result code 1
+16/11/2016 12:49:31 PM DEBUG    Connected with result code 0
+16/11/2016 12:49:31 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 12:49:31 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 12:49:31 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 12:49:31 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 12:49:31 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 12:49:31 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 12:49:31 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 12:49:31 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 12:49:31 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 12:49:31 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 12:50:17 PM DEBUG    Check stored token.
+16/11/2016 12:50:23 PM DEBUG    Connected with result code 0
+16/11/2016 12:50:23 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 12:50:23 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 12:50:23 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 12:50:23 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 12:50:23 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 12:50:23 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 12:50:23 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 12:50:23 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 12:50:23 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 12:50:23 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 12:50:29 PM DEBUG    Diconnected with result code 1
+16/11/2016 12:50:31 PM DEBUG    Connected with result code 0
+16/11/2016 12:50:31 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 12:50:31 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 12:50:31 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 12:50:31 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 12:50:31 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 12:50:31 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 12:50:31 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 12:50:31 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 12:50:31 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 12:50:31 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 12:50:36 PM DEBUG    Diconnected with result code 1
+16/11/2016 12:50:42 PM DEBUG    Connected with result code 0
+16/11/2016 12:50:42 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 12:50:42 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 12:50:42 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 12:50:42 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 12:50:42 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 12:50:42 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 12:50:42 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 12:50:42 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 12:50:42 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 12:50:42 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 12:54:35 PM DEBUG    Diconnected with result code 1
+16/11/2016 12:54:36 PM DEBUG    Connected with result code 0
+16/11/2016 12:54:36 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 12:54:36 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 12:54:36 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 12:54:36 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 12:54:36 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 12:54:36 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 12:54:36 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 12:54:36 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 12:54:36 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 12:54:36 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:04:12 PM DEBUG    Diconnected with result code 1
+16/11/2016 01:04:14 PM DEBUG    Connected with result code 0
+16/11/2016 01:04:14 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:04:14 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:04:14 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:04:14 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:04:14 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:04:14 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:04:14 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:04:14 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:04:14 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:04:14 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:08:15 PM DEBUG    Diconnected with result code 1
+16/11/2016 01:08:17 PM DEBUG    Connected with result code 0
+16/11/2016 01:08:17 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:08:17 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:08:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:08:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:08:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:08:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:08:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:08:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:08:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:08:17 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:08:20 PM DEBUG    Diconnected with result code 1
+16/11/2016 01:08:22 PM DEBUG    Connected with result code 0
+16/11/2016 01:08:22 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:08:22 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:08:22 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:08:22 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:08:22 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:08:22 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:08:22 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:08:22 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:08:22 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:08:22 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:09:15 PM DEBUG    Diconnected with result code 1
+16/11/2016 01:09:17 PM DEBUG    Connected with result code 0
+16/11/2016 01:09:17 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:09:17 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:09:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:09:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:09:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:09:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:09:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:09:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:09:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:09:17 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:12:56 PM DEBUG    Diconnected with result code 1
+16/11/2016 01:12:57 PM DEBUG    Connected with result code 0
+16/11/2016 01:12:57 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:12:57 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:12:57 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:12:57 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:12:57 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:12:57 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:12:57 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:12:57 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:12:57 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:12:57 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:27:53 PM DEBUG    Diconnected with result code 1
+16/11/2016 01:27:59 PM DEBUG    Connected with result code 0
+16/11/2016 01:27:59 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:27:59 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:27:59 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:27:59 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:27:59 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:27:59 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:27:59 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:27:59 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:27:59 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:27:59 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:29:04 PM DEBUG    Diconnected with result code 1
+16/11/2016 01:29:06 PM DEBUG    Connected with result code 0
+16/11/2016 01:29:06 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:29:06 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:29:06 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:29:06 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:29:06 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:29:06 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:29:06 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:29:06 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:29:06 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:29:06 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:50:12 PM DEBUG    Check stored token.
+16/11/2016 01:50:18 PM DEBUG    Connected with result code 0
+16/11/2016 01:50:18 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:50:18 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:50:18 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:50:18 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:50:18 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:50:18 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:50:18 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:50:18 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:50:18 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:50:18 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:50:28 PM DEBUG    Diconnected with result code 1
+16/11/2016 01:50:30 PM DEBUG    Connected with result code 0
+16/11/2016 01:50:30 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:50:30 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:50:30 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:50:30 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:50:30 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:50:30 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:50:30 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:50:30 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:50:30 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:50:30 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:50:20 PM DEBUG    Check stored token.
+16/11/2016 01:50:27 PM DEBUG    Connected with result code 0
+16/11/2016 01:50:27 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:50:27 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:50:27 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:50:27 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:50:27 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:50:27 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:50:27 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:50:27 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:50:27 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:50:27 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:50:12 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:50:14 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:50:16 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:50:19 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:50:21 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:50:24 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:50:27 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:50:30 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:50:32 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:50:35 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:50:38 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:50:41 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:50:46 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:50:47 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:50:50 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:50:53 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:50:55 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:50:58 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:51:01 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:51:04 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:51:06 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:51:09 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:51:12 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:51:15 PM DEBUG    Check stored token.
+16/11/2016 01:51:17 PM DEBUG    Connected with result code 0
+16/11/2016 01:51:17 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:51:17 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:51:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:51:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:51:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:51:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:51:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:51:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:51:17 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:51:17 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:51:53 PM DEBUG    Diconnected with result code 1
+16/11/2016 01:51:55 PM DEBUG    Connected with result code 0
+16/11/2016 01:51:55 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:51:55 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:51:55 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:51:55 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:51:55 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:51:55 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:51:55 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:51:55 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:51:55 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:51:55 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:52:02 PM DEBUG    Diconnected with result code 1
+16/11/2016 01:52:03 PM DEBUG    Connected with result code 0
+16/11/2016 01:52:03 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:52:03 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:52:03 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:52:03 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:52:03 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:52:03 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:52:03 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:52:03 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:52:03 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:52:03 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:53:08 PM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+16/11/2016 01:53:13 PM DEBUG    Check stored token.
+16/11/2016 01:53:14 PM DEBUG    Connected with result code 0
+16/11/2016 01:53:14 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:53:14 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:53:14 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:53:14 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:53:14 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:53:14 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:53:14 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:53:14 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:53:14 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:53:14 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:53:32 PM DEBUG    Diconnected with result code 1
+16/11/2016 01:53:38 PM DEBUG    Connected with result code 0
+16/11/2016 01:53:38 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:53:38 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:53:38 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:53:38 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:53:38 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:53:38 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:53:38 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:53:38 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:53:38 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:53:38 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:55:23 PM DEBUG    Diconnected with result code 1
+16/11/2016 01:55:25 PM DEBUG    Connected with result code 0
+16/11/2016 01:55:25 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:55:25 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:55:25 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:55:25 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:55:25 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:55:25 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:55:25 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:55:25 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:55:25 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:55:25 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:53:19 PM DEBUG    Check stored token.
+16/11/2016 01:53:20 PM DEBUG    Connected with result code 0
+16/11/2016 01:53:20 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:53:20 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:53:20 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:53:20 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:53:20 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:53:20 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:53:20 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:53:20 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:53:20 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:53:20 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:53:08 PM DEBUG    Check stored token.
+16/11/2016 01:53:09 PM DEBUG    Connected with result code 0
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:53:21 PM DEBUG    Diconnected with result code 1
+16/11/2016 01:53:22 PM DEBUG    Connected with result code 0
+16/11/2016 01:53:22 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:53:22 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:53:22 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:53:22 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:53:22 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:53:22 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:53:22 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:53:22 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:53:22 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:53:22 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:53:08 PM DEBUG    Check stored token.
+16/11/2016 01:53:09 PM DEBUG    Connected with result code 0
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:53:08 PM DEBUG    Check stored token.
+16/11/2016 01:53:09 PM DEBUG    Connected with result code 0
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:53:09 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+16/11/2016 01:53:15 PM DEBUG    Diconnected with result code 1
+16/11/2016 01:53:21 PM DEBUG    Connected with result code 0
+16/11/2016 01:53:21 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+16/11/2016 01:53:21 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+16/11/2016 01:53:21 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+16/11/2016 01:53:21 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+16/11/2016 01:53:21 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+16/11/2016 01:53:21 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+16/11/2016 01:53:21 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+16/11/2016 01:53:21 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+16/11/2016 01:53:21 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+16/11/2016 01:53:21 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+09/12/2016 10:19:19 PM DEBUG    Check stored token.
+09/12/2016 10:19:21 PM DEBUG    Connected with result code 0
+09/12/2016 10:19:21 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+09/12/2016 10:19:21 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+09/12/2016 10:19:21 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+09/12/2016 10:19:21 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+09/12/2016 10:19:21 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+09/12/2016 10:19:21 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+09/12/2016 10:19:21 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+09/12/2016 10:19:21 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+09/12/2016 10:19:21 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+09/12/2016 10:19:21 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+09/12/2016 10:25:13 PM DEBUG    Check stored token.
+09/12/2016 10:25:19 PM DEBUG    Connected with result code 0
+09/12/2016 10:25:19 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+09/12/2016 10:25:19 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+09/12/2016 10:25:19 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+09/12/2016 10:25:19 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+09/12/2016 10:25:19 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+09/12/2016 10:25:19 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+09/12/2016 10:25:19 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+09/12/2016 10:25:19 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+09/12/2016 10:25:19 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+09/12/2016 10:25:19 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+09/12/2016 10:50:12 PM DEBUG    Check stored token.
+09/12/2016 10:50:13 PM DEBUG    Connected with result code 0
+09/12/2016 10:50:13 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+09/12/2016 10:50:13 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+09/12/2016 10:50:13 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+09/12/2016 10:50:13 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+09/12/2016 10:50:13 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+09/12/2016 10:50:13 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+09/12/2016 10:50:13 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+09/12/2016 10:50:13 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+09/12/2016 10:50:13 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+09/12/2016 10:50:13 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+09/12/2016 11:10:46 PM DEBUG    Diconnected with result code 1
+09/12/2016 11:10:48 PM DEBUG    Connected with result code 0
+09/12/2016 11:10:48 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+09/12/2016 11:10:48 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+09/12/2016 11:10:48 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+09/12/2016 11:10:48 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+09/12/2016 11:10:48 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+09/12/2016 11:10:48 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+09/12/2016 11:10:48 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+09/12/2016 11:10:48 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+09/12/2016 11:10:48 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+09/12/2016 11:10:48 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+09/12/2016 11:50:10 PM DEBUG    Check stored token.
+09/12/2016 11:50:11 PM DEBUG    Connected with result code 0
+09/12/2016 11:50:11 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+09/12/2016 11:50:11 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+09/12/2016 11:50:11 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+09/12/2016 11:50:11 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+09/12/2016 11:50:11 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+09/12/2016 11:50:11 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+09/12/2016 11:50:11 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+09/12/2016 11:50:11 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+09/12/2016 11:50:11 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+09/12/2016 11:50:11 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+10/12/2016 12:50:10 AM DEBUG    Check stored token.
+10/12/2016 12:50:11 AM DEBUG    Connected with result code 0
+10/12/2016 12:50:11 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+10/12/2016 12:50:11 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+10/12/2016 12:50:11 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+10/12/2016 12:50:11 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+10/12/2016 12:50:11 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+10/12/2016 12:50:11 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+10/12/2016 12:50:11 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+10/12/2016 12:50:11 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+10/12/2016 12:50:11 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+10/12/2016 12:50:11 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+10/12/2016 01:50:11 AM DEBUG    Check stored token.
+10/12/2016 01:50:12 AM DEBUG    Connected with result code 0
+10/12/2016 01:50:12 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+10/12/2016 01:50:12 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+10/12/2016 01:50:12 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+10/12/2016 01:50:12 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+10/12/2016 01:50:12 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+10/12/2016 01:50:12 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+10/12/2016 01:50:12 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+10/12/2016 01:50:12 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+10/12/2016 01:50:12 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+10/12/2016 01:50:12 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+10/12/2016 02:50:13 AM DEBUG    Check stored token.
+10/12/2016 02:50:14 AM DEBUG    Connected with result code 0
+10/12/2016 02:50:14 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+10/12/2016 02:50:14 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+10/12/2016 02:50:14 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+10/12/2016 02:50:14 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+10/12/2016 02:50:14 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+10/12/2016 02:50:14 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+10/12/2016 02:50:14 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+10/12/2016 02:50:14 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+10/12/2016 02:50:14 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+10/12/2016 02:50:14 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+10/12/2016 03:50:10 AM DEBUG    Check stored token.
+10/12/2016 03:50:11 AM DEBUG    Connected with result code 0
+10/12/2016 03:50:11 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+10/12/2016 03:50:11 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+10/12/2016 03:50:11 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+10/12/2016 03:50:11 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+10/12/2016 03:50:11 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+10/12/2016 03:50:11 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+10/12/2016 03:50:11 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+10/12/2016 03:50:11 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+10/12/2016 03:50:11 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+10/12/2016 03:50:11 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+10/12/2016 04:50:10 AM DEBUG    Check stored token.
+10/12/2016 04:50:16 AM DEBUG    Connected with result code 0
+10/12/2016 04:50:16 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+10/12/2016 04:50:16 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+10/12/2016 04:50:16 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+10/12/2016 04:50:16 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+10/12/2016 04:50:16 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+10/12/2016 04:50:16 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+10/12/2016 04:50:16 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+10/12/2016 04:50:16 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+10/12/2016 04:50:16 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+10/12/2016 04:50:16 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+10/12/2016 05:50:11 AM DEBUG    Check stored token.
+10/12/2016 05:50:13 AM DEBUG    Connected with result code 0
+10/12/2016 05:50:13 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+10/12/2016 05:50:13 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+10/12/2016 05:50:13 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+10/12/2016 05:50:13 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+10/12/2016 05:50:13 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+10/12/2016 05:50:13 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+10/12/2016 05:50:13 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+10/12/2016 05:50:13 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+10/12/2016 05:50:13 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+10/12/2016 05:50:13 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+10/12/2016 06:50:11 AM DEBUG    Check stored token.
+10/12/2016 06:50:12 AM DEBUG    Connected with result code 0
+10/12/2016 06:50:12 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+10/12/2016 06:50:12 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+10/12/2016 06:50:12 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+10/12/2016 06:50:12 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+10/12/2016 06:50:12 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+10/12/2016 06:50:12 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+10/12/2016 06:50:12 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+10/12/2016 06:50:12 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+10/12/2016 06:50:12 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+10/12/2016 06:50:12 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+10/12/2016 07:50:13 AM DEBUG    Check stored token.
+10/12/2016 07:50:14 AM DEBUG    Connected with result code 0
+10/12/2016 07:50:14 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+10/12/2016 07:50:14 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+10/12/2016 07:50:14 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+10/12/2016 07:50:14 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+10/12/2016 07:50:14 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+10/12/2016 07:50:14 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+10/12/2016 07:50:14 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+10/12/2016 07:50:14 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+10/12/2016 07:50:14 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+10/12/2016 07:50:14 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+10/12/2016 07:50:20 AM DEBUG    Diconnected with result code 1
+10/12/2016 07:50:21 AM DEBUG    Connected with result code 0
+10/12/2016 07:50:21 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+10/12/2016 07:50:21 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+10/12/2016 07:50:21 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+10/12/2016 07:50:21 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+10/12/2016 07:50:21 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+10/12/2016 07:50:21 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+10/12/2016 07:50:21 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+10/12/2016 07:50:21 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+10/12/2016 07:50:21 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+10/12/2016 07:50:21 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+10/12/2016 07:50:10 AM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+10/12/2016 07:50:12 AM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+10/12/2016 07:50:14 AM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+10/12/2016 07:50:17 AM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+10/12/2016 07:50:19 AM DEBUG    Check stored token.
+Traceback (most recent call last):
+  File "/root/pudza/arduino.py", line 41, in <module>
+    microgear.connect(False)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 134, in connect
+    microgear.mqtt_client.connect(endpoint[0], int(endpoint[1]), 60)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 686, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 808, in reconnect
+    sock = socket.create_connection((self._host, self._port), source_address=(self._bind_address, 0))
+  File "/usr/lib/python2.7/socket.py", line 553, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+socket.gaierror: [Errno -2] Name or service not known
+10/12/2016 07:50:21 AM DEBUG    Check stored token.
+10/12/2016 07:50:33 AM DEBUG    Connected with result code 0
+10/12/2016 07:50:33 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+10/12/2016 07:50:33 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+10/12/2016 07:50:33 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+10/12/2016 07:50:33 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+10/12/2016 07:50:33 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+10/12/2016 07:50:33 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+10/12/2016 07:50:33 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+10/12/2016 07:50:33 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+10/12/2016 07:50:33 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+10/12/2016 07:50:33 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+10/12/2016 07:51:08 AM DEBUG    Diconnected with result code 1
+10/12/2016 07:51:09 AM DEBUG    Connected with result code 0
+10/12/2016 07:51:09 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+10/12/2016 07:51:09 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+10/12/2016 07:51:09 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+10/12/2016 07:51:09 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+10/12/2016 07:51:09 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+10/12/2016 07:51:09 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+10/12/2016 07:51:09 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+10/12/2016 07:51:09 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+10/12/2016 07:51:09 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+10/12/2016 07:51:09 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+10/12/2016 07:52:55 AM DEBUG    Check stored token.
+10/12/2016 07:52:56 AM DEBUG    Connected with result code 0
+10/12/2016 07:52:56 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+10/12/2016 07:52:56 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+10/12/2016 07:52:56 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+10/12/2016 07:52:56 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+10/12/2016 07:52:56 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+10/12/2016 07:52:56 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+10/12/2016 07:52:56 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+10/12/2016 07:52:56 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+10/12/2016 07:52:56 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+10/12/2016 07:52:56 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+10/12/2016 07:53:29 AM DEBUG    Diconnected with result code 1
+10/12/2016 07:53:30 AM DEBUG    Connected with result code 0
+10/12/2016 07:53:30 AM DEBUG    Auto subscribe /PUDZAHydro/eccal
+10/12/2016 07:53:30 AM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+10/12/2016 07:53:30 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+10/12/2016 07:53:30 AM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+10/12/2016 07:53:30 AM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+10/12/2016 07:53:30 AM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+10/12/2016 07:53:30 AM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+10/12/2016 07:53:30 AM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+10/12/2016 07:53:30 AM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+10/12/2016 07:53:30 AM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+11/12/2016 01:55:02 PM DEBUG    Check stored token.
+11/12/2016 01:55:03 PM DEBUG    Connected with result code 0
+11/12/2016 01:55:03 PM DEBUG    Auto subscribe /PUDZAHydro/eccal
+11/12/2016 01:55:03 PM DEBUG    Auto subscribe /PUDZAHydro/eccalmsg
+11/12/2016 01:55:03 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amptemp
+11/12/2016 01:55:03 PM DEBUG    Auto subscribe /PUDZAHydro/uno/amphum
+11/12/2016 01:55:03 PM DEBUG    Auto subscribe /PUDZAHydro/uno/wtrtemp
+11/12/2016 01:55:03 PM DEBUG    Auto subscribe /PUDZAHydro/uno/flow
+11/12/2016 01:55:03 PM DEBUG    Auto subscribe /PUDZAHydro/uno/soilhum
+11/12/2016 01:55:03 PM DEBUG    Auto subscribe /PUDZAHydro/uno/rain
+11/12/2016 01:55:03 PM DEBUG    Auto subscribe /PUDZAHydro/uno/ec
+11/12/2016 01:55:03 PM DEBUG    Auto subscribe /&id/rG5yzDkolzJrIxHU/#
+Exception in thread Thread-59:
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/threading.py", line 810, in __bootstrap_inner
+    self.run()
+  File "/usr/lib/python2.7/threading.py", line 763, in run
+    self.__target(*self.__args, **self.__kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/microgear/client.py", line 225, in publish_thread
+    microgear.mqtt_client.publish(topic,message,qos=qos,retain=retain)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 980, in publish
+    rc = self._send_publish(local_mid, topic, local_payload, qos, retain, False, info)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 1988, in _send_publish
+    upayload = payload.encode('utf-8')
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xc0 in position 4: ordinal not in range(128)
+

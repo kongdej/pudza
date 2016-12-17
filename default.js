@@ -10,9 +10,9 @@
         min: 0,
         max: 5,
         relativeGaugeSize: true,
-        gaugeWidthScale: .8,
+        gaugeWidthScale: 1,
         decimals:2,
-        title: "ความเข้มข้นปุ๋ย",
+        title: "Nutrient EC",
         label:"mS/cm",
         titlePosition: "below",
         titleFontSize: "5px",
@@ -26,9 +26,9 @@
         max: 15,
         counter: true,
         relativeGaugeSize: true,
-        gaugeWidthScale: .8,
+        gaugeWidthScale: 1,
         decimals:true,
-        title: "อัตราการไหล",
+        title: "Water Flow",
         label:"L/min",
         titlePosition: "below"
       });
@@ -41,8 +41,8 @@
         relativeGaugeSize: true,
         counter: true,
         formatNumber:true,
-        gaugeWidthScale: .8,
-        title: "แสงแดด",
+        gaugeWidthScale: 1,
+        title: "Ambient Light",
         label:"Lux",
         titlePosition: "below",
         titleFontSize: "5px",
@@ -58,8 +58,8 @@
         max: 100,
         relativeGaugeSize: true,
         decimals:true,
-        gaugeWidthScale: .8,
-        title: "อุณหภูมิอากาศ",
+        gaugeWidthScale: 1,
+        title: "Ambient Temperature",
         label:"DegC",
         titlePosition: "below"
       });
@@ -71,9 +71,9 @@
         min: 0,
         max: 100,
         relativeGaugeSize: true,
-        gaugeWidthScale: .8,
+        gaugeWidthScale: 1,
         decimals:true,
-        title: "อุณหภูมิรางปลูก",
+        title: "Gutter Temperaure",
         label:"DegC",
         titlePosition: "below"
 
@@ -87,12 +87,25 @@
         max: 100,
         relativeGaugeSize: true,
         decimals:true,
-        gaugeWidthScale: .8,
-        title: "อุณหภูมิน้ำปุ๋ย",
+        gaugeWidthScale: 1,
+        title: "Nutrient Temperature",
         label:"DegC",
         titlePosition: "below"        
       });
 
+    var g_avgtemp = new JustGage({
+        id: "gaugeAvgTemp",
+        value: 0,
+        value:0,
+        min: 0,
+        max: 100,
+        relativeGaugeSize: true,
+        decimals:true,
+        gaugeWidthScale: 1,
+        title: "Average Temperature",
+        label:"DegC",
+        titlePosition: "below"        
+      });
 
     var g_hum = new JustGage({
         id: "gaugeHum",
@@ -102,9 +115,9 @@
         max: 100,
         relativeGaugeSize: true,
         donut:true,
-        gaugeWidthScale: 0.5,
+        gaugeWidthScale: 1,
         decimals:true,
-        title: "ความชื้นอากาศ",
+        title: "Ambient Humidity",
         label:"%",
         titlePosition: "below"        
       });
@@ -118,8 +131,8 @@
         relativeGaugeSize: true,
         donut:true,
         decimals:true,
-        gaugeWidthScale: 0.5,
-        title: "ฝกตก",
+        gaugeWidthScale: 1,
+        title: "Rain",
         label:"%",
         titlePosition: "below"        
       });
@@ -132,11 +145,9 @@
         max: 100,
         relativeGaugeSize: true,
         donut:true,
- 
-        gaugeWidthScale: 0.5,
-
+        gaugeWidthScale: 1,
         decimals:true,
-        title: "ความชื้นดิน",
+        title: "Soil Humidity",
         label:"%",
         titlePosition: "below"        
       });
@@ -178,10 +189,7 @@
             $("#s_arduino").removeClass("btn-default");
             $("#s_arduino").addClass("btn-warning");
         }
-        if (topic == "/PUDZAHydro/reporter") {
-            $("#s_reporter").removeClass("btn-default");
-            $("#s_reporter").addClass("btn-warning");
-        }
+
         if (topic == "/PUDZAHydro/uno/amptemp") {
             g_atemp.refresh(msg);
         }
@@ -214,11 +222,11 @@
                 $('#mist_status').text('OFF');
             }
         }
+        else if (topic == "/PUDZAHydro/nodemcu/avgtemp") {
+            g_avgtemp.refresh(msg);
+        }
         else if (topic == "/PUDZAHydro/eccalmsg") {
             $('#echo_eccal').text(msg);
-        }
-        else if (topic == "/PUDZAHydro/sptempf") {
-            $('#echo_sptemp').text(msg);
         }
         else {
 //            document.getElementById("data").innerHTML = now.getDay() + ":[" + topic+ "] " + msg;
@@ -242,9 +250,7 @@
         microgear.subscribe("/eccalmsg");
         microgear.subscribe("/mist");
         microgear.subscribe("/sptemp");
-        microgear.subscribe("/sptempf");
-        microgear.subscribe("/tempauto");
-        microgear.subscribe("/reporter");
+        microgear.subscribe("/nodemcu/avgtemp");
     });
 
     microgear.on('present', function(event) {
@@ -304,16 +310,4 @@
     $("#mistoff").click(function () {
         console.log("off");
         microgear.publish ("/mist", "0");
-    });
-
-
-    $('#button1').jqxSwitchButton({ height: 27, width: 81,  checked: true });
-
-    $('#button1').on('checked', function (event) {
-        microgear.publish ("/tempauto", "0");
-        console.log('auto');
-    });
-    $('#button1').on('unchecked', function (event) {
-        microgear.publish ("/tempauto", "1");
-        console.log('manual');
     });

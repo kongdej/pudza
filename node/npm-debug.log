@@ -1,0 +1,65 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'microgear',
+1 verbose cli   '--save' ]
+2 info using npm@3.8.6
+3 info using node@v5.11.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData microgear
+8 silly fetchNamedPackageData microgear
+9 silly mapToRegistry name microgear
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'microgear',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   name: 'microgear',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/microgear
+14 verbose request uri https://registry.npmjs.org/microgear
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 8:02:58 AM
+17 verbose request id 656db98fb9700491
+18 http request GET https://registry.npmjs.org/microgear
+19 info retry will retry, error on last attempt: Error: certificate is not yet valid
+20 info attempt registry request try #2 at 8:03:11 AM
+21 http request GET https://registry.npmjs.org/microgear
+22 info retry will retry, error on last attempt: Error: certificate is not yet valid
+23 info attempt registry request try #3 at 8:04:15 AM
+24 http request GET https://registry.npmjs.org/microgear
+25 silly fetchPackageMetaData Error: certificate is not yet valid
+25 silly fetchPackageMetaData     at Error (native)
+25 silly fetchPackageMetaData     at TLSSocket.<anonymous> (_tls_wrap.js:1065:38)
+25 silly fetchPackageMetaData     at emitNone (events.js:80:13)
+25 silly fetchPackageMetaData     at TLSSocket.emit (events.js:179:7)
+25 silly fetchPackageMetaData     at TLSSocket._init.ssl.onclienthello.ssl.oncertcb.TLSSocket._finishInit (_tls_wrap.js:593:8)
+25 silly fetchPackageMetaData     at TLSWrap.ssl.onclienthello.ssl.oncertcb.ssl.onnewsession.ssl.onhandshakedone (_tls_wrap.js:425:38)
+25 silly fetchPackageMetaData  error for microgear { [Error: certificate is not yet valid] code: 'CERT_NOT_YET_VALID' }
+26 silly rollbackFailedOptional Starting
+27 silly rollbackFailedOptional Finishing
+28 silly runTopLevelLifecycles Starting
+29 silly runTopLevelLifecycles Finishing
+30 silly install printInstalled
+31 verbose stack Error: certificate is not yet valid
+31 verbose stack     at Error (native)
+31 verbose stack     at TLSSocket.<anonymous> (_tls_wrap.js:1065:38)
+31 verbose stack     at emitNone (events.js:80:13)
+31 verbose stack     at TLSSocket.emit (events.js:179:7)
+31 verbose stack     at TLSSocket._init.ssl.onclienthello.ssl.oncertcb.TLSSocket._finishInit (_tls_wrap.js:593:8)
+31 verbose stack     at TLSWrap.ssl.onclienthello.ssl.oncertcb.ssl.onnewsession.ssl.onhandshakedone (_tls_wrap.js:425:38)
+32 verbose cwd /root/temp/node
+33 error Linux 4.4.8-v7+
+34 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install" "microgear" "--save"
+35 error node v5.11.1
+36 error npm  v3.8.6
+37 error code CERT_NOT_YET_VALID
+38 error certificate is not yet valid
+39 error If you need help, you may report this error at:
+39 error     <https://github.com/npm/npm/issues>
+40 verbose exit [ 1, true ]

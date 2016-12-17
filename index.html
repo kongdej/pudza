@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Pudza Hydroponics Project</title>
+    <title>Home | Pudza Project</title>
 	
 	<!-- core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -23,53 +23,31 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-
-
-
-
-    <link rel="stylesheet" href="css/jqx.base.css" type="text/css" />
-
-    <script src="js/jquery.js"></script>
-    
-    <script type="text/javascript" src="js/jqxcore.js"></script>
-    <script type="text/javascript" src="js/jqxswitchbutton.js"></script>
-    <script type="text/javascript" src="js/jqxcheckbox.js"></script>
-    <script type="text/javascript">
-    </script>
-
-
-
-
 </head><!--/head-->
 
 <body class="homepage">
+
     <header id="header">
-        <nav class="navbar navbar-inverse" role="banner">
+         <nav class="navbar navbar-inverse" role="banner">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <h2 class="top-number pull-left"><i class="top-number fa fa-signal"></i> PUDZA DASHBOARD</h2>
-                </div>
-                
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="hmi.html" target="_blank">HMI</a></li>
-                        <li><a href="configuration.html">Configuration</a></li>
-                    </ul>
-                </div>
+                <h2 class="top-number pull-left"><h1><i class="top-number fa fa-signal"></i> PUDZA</h1> Hydroponics Control and Information System</h2>
+ 
             </div><!--/.container-->
         </nav><!--/nav-->
-        
+
+        <div class="top-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <div class="top-number"><p class="" id="data"></p> </div>
+                    </div>
+                </div>
+            </div><!--/.container-->
+        </div><!--/.top-bar-->
+
+
+
     </header><!--/header-->
-
-
-
 
 
     <section id="middle">
@@ -82,33 +60,35 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div id="gaugeEC"></div>   
-                            <div id="gaugeFlow"></div>   
                             <div id="gaugeLight"></div>   
+                            <div id="gaugeABTemp"></div>   
+                            <div id="gaugeAvgTemp"></div>   
                         </div>
                         <div class="col-sm-6">
+                            <div id="gaugeFlow"></div>   
                             <div id="gaugeATemp"></div>   
-                            <div id="gaugeGTemp"></div>                                 
-                            <div id="gaugeABTemp"></div>   
+                            <div id="gaugeGTemp"></div>   
                         </div>
                     </div>
 <hr>
                     <div class="row">
                         <div class="col-sm-4">
-                            <div id="gaugeHum" style="width:220px"></div>   
+                            <div id="gaugeHum"></div>   
                         </div>
                         <div class="col-sm-4">
-                            <div id="gaugeSoil" style="width:220px"></div>   
+                            <div id="gaugeSoil"></div>   
                         </div>
                         <div class="col-sm-4">
-                            <div id="gaugeRain" style="width:220px"></div>   
+                            <div id="gaugeRain"></div>   
                         </div>
                     </div>
 
                 
                 </div>
-                <div class="col-sm-1"></div>
 
-                <div class="col-sm-5 wow fadeInDown">                    
+                <div class="col-sm-1"></div>
+                <div class="col-sm-5 wow fadeInDown">
+                    
                     <div class="accordion">
                         <div class="panel-group" id="accordion1">
                             <div class="panel panel-default">                            
@@ -142,7 +122,7 @@
                                 <div class="panel-heading active">
                                   <h3 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseOne3" >
-                                       EC Online Calibration
+                                       Control Panel
                                       <i class="fa fa-angle-right pull-right"></i>
                                     </a>
                                   </h3>
@@ -152,7 +132,7 @@
                                   <div class="panel-body">
                                       <div class="media accordion-inner">
 
-                                            <label class="col-sm-4 control-label">Set EC </label>
+                                            <label class="col-sm-4 control-label">EC Calibration</label>
                                             <div class="input-group col-sm-4">
                                               <input type="text" class="form-control  col-sm-6" id="ec_cal">
                                               <div class="input-group-addon">mS/cm</div>
@@ -162,45 +142,9 @@
                                             </div>
                                             <div class="col-sm-offset-4" id="echo_eccal"></div>
 
-                                      </div>
-                                    </div>
-                                </div>
+                                            <hr>
 
-                            </div>
-                        </div>
-                    </div>
-
-
-<br>
-
-
-                    <div class="accordion">
-                        
-                        <div class="panel-group" id="accordion2">
-                            <div class="panel panel-default">                            
-                                <div class="panel-heading active">
-                                  <h3 class="panel-title">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseOne3" >
-                                       Misting System @ <span id="echo_sptemp"></span>
-                                      <i class="fa fa-angle-right pull-right"></i>
-                                    </a>
-                                  </h3>
-                                </div>
-
-                                <div id="collapseOne3" class="panel-collapse collapse in">
-                                  <div class="panel-body">
-                                      <div class="media accordion-inner">
-
-                                
-                                            <div class="row"> 
-                                                <label class="col-sm-3 control-label">Mode</label>
-                                                <div class="col-sm-9">
-                                                    <div id="button1" style="margin-left: 21px;"></div>
-                                                </div>
-                                            <hr>   
-                                            
-                                            <label class="col-sm-4 control-label">Set Point </label>
-
+                                            <label class="col-sm-4 control-label">Temp. SP</label>
                                             <div class="input-group col-sm-3">
                                               <input type="text" class="form-control" id="sp_temp">
                                               <div class="input-group-addon">C</div>
@@ -208,9 +152,8 @@
                                             <input type="button" class="btn btn-primary col-sm-offset-4" id="csp_temp" value="SET">
                                             
                                             <hr>
-
-                                            
-                                                <label class="col-sm-4 control-label">Pump</label>
+                                            <div class="row">    
+                                                <label class="col-sm-4 control-label">Sprayer Pump</label>
                                                 <div class="col-sm-8" id="mist_status">OFF</div>
                                                 <div class="col-sm-12 text-center">                                            
                                                         <input type="button" class="btn btn-primary" value="ON" id="miston"> 
@@ -244,6 +187,7 @@
         </div><!--/.container-->
     </section><!--/#middle-->
 
+  
     <section>
             <div class="container">
                 <div class="accordion">
@@ -263,17 +207,16 @@
                                   <div class="media accordion-inner">                                        
                                         <div class="row">
                                             <div class="col-sm-6">
-                                                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/170643/charts/7?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%82%E0%B9%89%E0%B8%A1%E0%B8%82%E0%B9%89%E0%B8%99%E0%B8%9B%E0%B8%B8%E0%B9%8B%E0%B8%A2&type=line&xaxis=Time&yaxis=mS%2Fcm"></iframe>
-                                                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/170643/charts/8?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=%E0%B9%81%E0%B8%AA%E0%B8%87%E0%B9%81%E0%B8%94%E0%B8%94&type=line&xaxis=Time&yaxis=Lux"></iframe>
-                                                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/170643/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%8A%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%AD%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A8&type=line&xaxis=Time&yaxis=%25"></iframe>
-                                                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/170643/charts/5?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=%E0%B8%9D%E0%B8%99%E0%B8%95%E0%B8%81&type=line&xaxis=Time&yaxis=%25"></iframe>
+                                                <iframe width="450" height="260" style="border: 2px solid #cccccc;" src="https://thingspeak.com/channels/170643/charts/7?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=EC&type=line&xaxis=Time&yaxis=mS%2Fcm"></iframe>
+                                                <iframe width="450" height="260" style="border: 2px solid #cccccc;" src="https://thingspeak.com/channels/170643/charts/8?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Ambient+Light&type=line&xaxis=Time&yaxis=Lux"></iframe>
+                                                <iframe width="450" height="260" style="border: 2px solid #cccccc;" src="https://thingspeak.com/channels/170643/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Ambient+Humidity&type=line&xaxis=Time&yaxis=%25"></iframe>
+                                                <iframe width="450" height="260" style="border: 2px solid #cccccc;" src="https://thingspeak.com/channels/170643/charts/5?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Rain&type=line&xaxis=Time&yaxis=%25"></iframe>
                                             </div>
                                             <div class="col-sm-6">
-                                                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/170643/charts/6?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=%E0%B8%AD%E0%B8%B1%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%84%E0%B8%AB%E0%B8%A5&type=line&xaxis=Time&yaxis=L%2Fmin"></iframe>
-                                                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/170643/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=%E0%B8%AD%E0%B8%B8%E0%B8%93%E0%B8%AB%E0%B8%A0%E0%B8%B9%E0%B8%A1%E0%B8%B4%E0%B8%AD%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A8&type=line&xaxis=Time&yaxis=Deg+C"></iframe>
-                                                
-                                                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/170643/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=%E0%B8%AD%E0%B8%B8%E0%B8%93%E0%B8%AB%E0%B8%A0%E0%B8%B9%E0%B8%A1%E0%B8%B4%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%9B%E0%B8%B8%E0%B9%8B%E0%B8%A2&type=line&xaxis=Time&yaxis=DegC"></iframe>
-                                                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/170643/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B8%8A%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B8%94%E0%B8%B4%E0%B8%99&type=line&xaxis=Time&yaxis=%25"></iframe>
+                                                <iframe width="450" height="260" style="border: 2px solid #cccccc;" src="https://thingspeak.com/channels/170643/charts/6?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Flow&type=line&xaxis=Time&yaxis=L%2Fmin"></iframe>
+                                                <iframe width="450" height="260" style="border: 2px solid #cccccc;" src="https://thingspeak.com/channels/170643/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Ambient+Temperature&type=line&xaxis=Time&yaxis=Deg+C"></iframe>
+                                                <iframe width="450" height="260" style="border: 2px solid #cccccc;" src="https://thingspeak.com/channels/170643/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Fertilizer+Temperature&type=line&xaxis=Time&yaxis=DegC"></iframe>
+                                                <iframe width="450" height="260" style="border: 2px solid #cccccc;" src="https://thingspeak.com/channels/170643/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&title=Soil+Humidity&type=line&xaxis=Time&yaxis=%25"></iframe>
                                             </div>
                                         </div>
                                   </div>
@@ -289,7 +232,6 @@
         
     </section>
     
-  
 
     
     <footer id="footer" class="midnight-blue">
@@ -299,31 +241,23 @@
                     &copy; 2016-2017 <a target="_blank" href="http://shapebootstrap.net/" title="">PUDZA Maker Club</a>. All Rights Reserved.
                 </div>
                 <div class="col-sm-6">
-                    <div class="top-number"><p class="" id="data"></p> </div>        
+                    <ul class="pull-right">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Configuration</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </footer><!--/#footer-->
 
-   <section id="footer">
-       <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <a href="http://www.accuweather.com/en/th/nonthaburi/318832/weather-forecast/318832" class="aw-widget-legal">
-                    <!--
-                    By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at http://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at http://www.accuweather.com/en/privacy.
-                    -->
-                    </a><div id="awtd1479010478221" class="aw-widget-36hour"  data-locationkey="318832" data-unit="c" data-language="en-us" data-useip="false" data-uid="awtd1479010478221" data-editlocation="false"></div><script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
-                </div>
-            </div>
-        </div>
-    </section>
- 
+    <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/wow.min.js"></script>
+    <!--script src="js/wow.min.js"></script-->
     <script src="js/raphael-2.1.4.min.js"></script>
     <script src="js/justgage.js"></script>
     <script src="js/microgear.js"></script>
